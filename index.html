@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <img src="assets/dashboard/navbar-logo.png" alt="Logo" class="navbar-logo">
+            <div class="top-right">
+                <img src="assets/dashboard/user-avatar.png" alt="User" class="user-avatar-small">
+                <img src="assets/dashboard/dropdown-arrow.png" alt="Menu" class="dropdown-icon">
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Two Column Layout -->
+            <div class="two-column-layout">
+                <!-- Left Column - Main Content -->
+                <main class="main-column">
+                    <!-- Hero Section -->
+                    <section class="hero-section">
+                        <!-- User Card -->
+                        <div class="user-card-large">
+                            <div class="user-avatar-large"></div>
+                            <div class="user-info-box">
+                                <div class="user-name-text">Chris Pratt</div>
+                                <div class="user-location-row">
+                                    <div class="flag-icon"></div>
+                                    <div class="location-text">United States</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Cards Row -->
+                        <div class="info-cards-row">
+                            <!-- Card 1: EDUCATED -->
+                            <div class="info-card-educated">
+                                <div class="card-header-row">
+                                    <div class="badge-green">EDUCATED</div>
+                                    <div class="badge-red">MONTHLY</div>
+                                </div>
+                                <div class="card-free-text">Free</div>
+                                <div class="card-monthly-text">Monthly</div>
+                                <div class="card-renew-text">Renew on 12 Jan 2024</div>
+                                <div class="card-price-row">
+                                    <div class="currency-icon"></div>
+                                    <div class="price-text">500.00</div>
+                                </div>
+                                <div class="cashback-text">5% CASHBACK</div>
+                                <div class="deactivated-row">
+                                    <div class="deactivated-text">Deactivated</div>
+                                    <div class="toggle-switch"></div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: CULTIVATED -->
+                            <div class="info-card-cultivated">
+                                <div class="card-header-row">
+                                    <div class="badge-green">CULTIVATED</div>
+                                </div>
+                                <div class="card-free-text">Free</div>
+                                <div class="card-content-empty"></div>
+                            </div>
+
+                            <!-- Card 3: Free List -->
+                            <div class="info-card-freelist">
+                                <div class="card-icon-check"></div>
+                                <div class="card-title-text">Free List</div>
+                                <div class="card-subtitle-text">Add 500 songs</div>
+                                <div class="badge-row">
+                                    <div class="badge-free">FREE</div>
+                                    <div class="badge-onsale">ON SALE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Balance Cards Column -->
+                        <div class="balance-cards-column">
+                            <!-- My Balance Card -->
+                            <div class="balance-card-box">
+                                <div class="balance-icon"></div>
+                                <div class="balance-info">
+                                    <div class="balance-label">My Balance</div>
+                                    <div class="balance-amount-row">
+                                        <div class="currency-icon-small"></div>
+                                        <div class="amount-text">959 999.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- My Cashback Card -->
+                            <div class="balance-card-box">
+                                <div class="cashback-icon"></div>
+                                <div class="balance-info">
+                                    <div class="balance-label">My Cashback</div>
+                                    <div class="balance-amount-row">
+                                        <div class="currency-icon-small"></div>
+                                        <div class="amount-text">500.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QR Code Box -->
+                        <div class="qr-code-section">
+                            <div class="qr-title-text">My QR Code</div>
+                            <div class="qr-code-box"></div>
+                        </div>
+                    </section>
+
+                    <!-- Our Partner Shops -->
+                    <section class="content-section">
+                        <div class="section-title-bar">Our Partner Shops</div>
+                        <div class="three-col-grid">
+                            <div class="shop-card">
+                                <div class="shop-image-box"></div>
+                                <div class="shop-footer-row">
+                                    <div class="shop-user-avatar"></div>
+                                    <div class="shop-info-column">
+                                        <div class="shop-name-row">
+                                            <div class="shop-name-text"></div>
+                                            <div class="verified-icon"></div>
+                                        </div>
+                                        <div class="shop-rating-row">
+                                            <div class="rating-badge">
+                                                <div class="star-icon-small"></div>
+                                                <div class="rating-number"></div>
+                                                <div class="review-count"></div>
+                                            </div>
+                                            <div class="status-badge"></div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-actions">
+                                        <div class="shop-heart-icon"></div>
+                                        <div class="shop-number"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-card">
+                                <div class="shop-image-box"></div>
+                                <div class="shop-footer-row">
+                                    <div class="shop-user-avatar"></div>
+                                    <div class="shop-info-column">
+                                        <div class="shop-name-row">
+                                            <div class="shop-name-text"></div>
+                                            <div class="verified-icon"></div>
+                                        </div>
+                                        <div class="shop-rating-row">
+                                            <div class="rating-badge">
+                                                <div class="star-icon-small"></div>
+                                                <div class="rating-number"></div>
+                                                <div class="review-count"></div>
+                                            </div>
+                                            <div class="status-badge"></div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-actions">
+                                        <div class="shop-heart-icon"></div>
+                                        <div class="shop-number"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-card">
+                                <div class="shop-image-box"></div>
+                                <div class="shop-footer-row">
+                                    <div class="shop-user-avatar"></div>
+                                    <div class="shop-info-column">
+                                        <div class="shop-name-row">
+                                            <div class="shop-name-text"></div>
+                                            <div class="verified-icon"></div>
+                                        </div>
+                                        <div class="shop-rating-row">
+                                            <div class="rating-badge">
+                                                <div class="star-icon-small"></div>
+                                                <div class="rating-number"></div>
+                                                <div class="review-count"></div>
+                                            </div>
+                                            <div class="status-badge"></div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-actions">
+                                        <div class="shop-heart-icon"></div>
+                                        <div class="shop-number"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Choice your Plan -->
+                    <section class="content-section">
+                        <div class="section-header-row">
+                            <div class="section-header-left">
+                                <div class="section-title-bar">Choice your Plan</div>
+                                <div class="section-subtitle-text">Select a plan that works best for you</div>
+                            </div>
+                            <div class="section-header-right">
+                                <div class="plan-toggle-pills">
+                                    <div class="toggle-pill">Monthly</div>
+                                    <div class="toggle-pill">Yearly</div>
+                                </div>
+                                <div class="cashback-badge">5% CASHBACK</div>
+                                <div class="free-month-badge">1 Month Free</div>
+                            </div>
+                        </div>
+
+                        <div class="three-col-grid">
+                            <!-- Card 1: Cultivated (Red) -->
+                            <div class="plan-card-box plan-red">
+                                <div class="plan-top-badge-green">Currently Activated</div>
+                                <div class="plan-title-large">Cultivated</div>
+                                <div class="plan-access-text">Current access</div>
+                                <div class="plan-price-row-large">
+                                    <div class="currency-icon-plan"></div>
+                                    <div class="price-large-text">0.00</div>
+                                </div>
+                                <div class="plan-description-lines">
+                                    <div class="desc-line">For individual use with 30</div>
+                                    <div class="desc-line">summaries a month, no ads, and</div>
+                                    <div class="desc-line">basic support.</div>
+                                </div>
+                                <div class="plan-icons-grid-6">
+                                    <div class="plan-icon-red"></div>
+                                    <div class="plan-icon-red"></div>
+                                    <div class="plan-icon-red"></div>
+                                    <div class="plan-icon-red"></div>
+                                    <div class="plan-icon-red"></div>
+                                    <div class="plan-icon-red"></div>
+                                </div>
+                                <div class="plan-features-list">
+                                    <div class="feature-item-red">Follow Users</div>
+                                    <div class="feature-item-red">Enjoy Music</div>
+                                    <div class="feature-item-red">Enjoy Videos</div>
+                                    <div class="feature-item-red">Standard Wallet</div>
+                                    <div class="feature-item-red">Get cashback</div>
+                                    <div class="feature-item-red">and more</div>
+                                </div>
+                                <div class="plan-button-current">Your Current Plan</div>
+                            </div>
+
+                            <!-- Card 2: Educated (Orange) -->
+                            <div class="plan-card-box plan-orange">
+                                <div class="plan-header-with-toggle">
+                                    <div class="plan-top-badge-green">Edcuated Access</div>
+                                    <div class="monthly-yearly-toggle">
+                                        <div class="toggle-option">Monthly</div>
+                                        <div class="toggle-option">Yearly</div>
+                                    </div>
+                                </div>
+                                <div class="plan-title-large">Educated</div>
+                                <div class="plan-access-text">Manage access</div>
+                                <div class="plan-price-row-large">
+                                    <div class="currency-icon-plan"></div>
+                                    <div class="price-large-text">0.00</div>
+                                </div>
+                                <div class="plan-description-lines">
+                                    <div class="desc-line">Unlimited summaries, customization,</div>
+                                    <div class="desc-line">quick support, & app integrations</div>
+                                    <div class="desc-line">for professionals.</div>
+                                </div>
+                                <div class="plan-icons-grid-9">
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                    <div class="plan-icon-orange"></div>
+                                </div>
+                                <div class="plan-features-list">
+                                    <div class="feature-item-orange">Follow Users</div>
+                                    <div class="feature-item-orange">Enjoy Music</div>
+                                    <div class="feature-item-orange">Enjoy Videos</div>
+                                    <div class="feature-item-orange">Create Channel</div>
+                                    <div class="feature-item-orange">Text Comments</div>
+                                    <div class="feature-item-orange">Voice Comment</div>
+                                    <div class="feature-item-orange">Bsuiness Wallet</div>
+                                    <div class="feature-item-orange">Get cashback</div>
+                                    <div class="feature-item-orange">and more</div>
+                                </div>
+                                <div class="plan-button-cart">Add To Cart</div>
+                            </div>
+
+                            <!-- Card 3: Academic (Green) -->
+                            <div class="plan-card-box plan-green">
+                                <div class="plan-header-with-toggle">
+                                    <div class="plan-top-badge-green">Acadmic Access</div>
+                                    <div class="monthly-yearly-toggle">
+                                        <div class="toggle-option">Monthly</div>
+                                        <div class="toggle-option">Yearly</div>
+                                    </div>
+                                </div>
+                                <div class="plan-title-large">Academic</div>
+                                <div class="plan-access-text">Manage access</div>
+                                <div class="plan-price-row-large">
+                                    <div class="currency-icon-plan"></div>
+                                    <div class="price-large-text">0.00</div>
+                                </div>
+                                <div class="plan-description-lines">
+                                    <div class="desc-line">Team-focused with priority support,</div>
+                                    <div class="desc-line">API access, and advanced security</div>
+                                    <div class="desc-line">options.</div>
+                                </div>
+                                <div class="plan-icons-grid-9">
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                    <div class="plan-icon-green"></div>
+                                </div>
+                                <div class="plan-features-list">
+                                    <div class="feature-item-green">Follow Users</div>
+                                    <div class="feature-item-green">Enjoy Music</div>
+                                    <div class="feature-item-green">Enjoy Videos</div>
+                                    <div class="feature-item-green">Create Channel</div>
+                                    <div class="feature-item-green">Text Comments</div>
+                                    <div class="feature-item-green">Voice Comment</div>
+                                    <div class="feature-item-green">Bsuiness Wallet</div>
+                                    <div class="feature-item-green">Get cashback</div>
+                                    <div class="feature-item-green">and more</div>
+                                </div>
+                                <div class="plan-button-cart">Add To Cart</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Standard Zer packages -->
+                    <section class="content-section">
+                        <div class="section-title-bar">Standard Zer packages</div>
+                        <div class="three-col-grid">
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Business Zer packages -->
+                    <section class="content-section">
+                        <div class="section-title-bar">Business Zer packages</div>
+                        <div class="three-col-grid">
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="package-card-box">
+                                <div class="package-image-large"></div>
+                                <div class="package-info-area">
+                                    <div class="package-title-text">Titanium Pack</div>
+                                    <div class="package-price-label">Price</div>
+                                    <div class="price-row">
+                                        <div class="price-old-text">₹ 1000</div>
+                                        <div class="price-new-text">₹ 49.99</div>
+                                    </div>
+                                    <div class="package-subtitle-text">Use your Balance on YekBun</div>
+                                    <div class="package-icons-row">
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                        <div class="package-icon-small"></div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Upgrade Music Playlist -->
+                    <section class="content-section">
+                        <div class="section-title-bar">Upgrade Music Playlist</div>
+                        <div class="three-col-grid">
+                            <div class="music-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="music-image-large"></div>
+                                <div class="music-info-area">
+                                    <div class="music-title-text">Bronze Playlist</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="music-subtitle-text">Playlist Songs</div>
+                                    <div class="music-songs-count">50 Songs</div>
+                                    <div class="music-price-label">Price</div>
+                                    <div class="music-price-amount">₹ 1000</div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="music-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="music-image-large"></div>
+                                <div class="music-info-area">
+                                    <div class="music-title-text">Silver Playlist</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="music-subtitle-text">Playlist Songs</div>
+                                    <div class="music-songs-count">75 Songs</div>
+                                    <div class="music-price-label">Price</div>
+                                    <div class="music-price-amount">₹ 1000</div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="music-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="music-image-large"></div>
+                                <div class="music-info-area">
+                                    <div class="music-title-text">Gold Playlist</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="music-subtitle-text">Playlist Songs</div>
+                                    <div class="music-songs-count">100 Songs</div>
+                                    <div class="music-price-label">Price</div>
+                                    <div class="music-price-amount">₹ 2000</div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Streaming Minutes -->
+                    <section class="content-section">
+                        <div class="section-title-bar">Streaming Minutes</div>
+                        <div class="three-col-grid">
+                            <div class="stream-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="stream-image-large"></div>
+                                <div class="stream-info-area">
+                                    <div class="stream-title-text">Bronze Stream</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="stream-label-text">Minute</div>
+                                    <div class="stream-minutes-count">500 Min</div>
+                                    <div class="stream-price-label">Price</div>
+                                    <div class="stream-price-amount">₹ 1000.00</div>
+                                    <div class="stream-description-lines">
+                                        <div class="stream-desc-line">Charge ur account and use the</div>
+                                        <div class="stream-desc-line">Minute for more streaming</div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="stream-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="stream-image-large"></div>
+                                <div class="stream-info-area">
+                                    <div class="stream-title-text">Silver Stream</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="stream-label-text">Minute</div>
+                                    <div class="stream-minutes-count">1000 Min</div>
+                                    <div class="stream-price-label">Price</div>
+                                    <div class="stream-price-amount">₹ 1000.00</div>
+                                    <div class="stream-description-lines">
+                                        <div class="stream-desc-line">Charge ur account and use the</div>
+                                        <div class="stream-desc-line">Minute for more streaming</div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                            <div class="stream-card-box">
+                                <div class="corner-badge">5% CASHBACK</div>
+                                <div class="stream-image-large"></div>
+                                <div class="stream-info-area">
+                                    <div class="stream-title-text">Gold Stream</div>
+                                    <div class="auto-charge-badge">Auto Charge</div>
+                                    <div class="stream-label-text">Minute</div>
+                                    <div class="stream-minutes-count">2000 Min</div>
+                                    <div class="stream-price-label">Price</div>
+                                    <div class="stream-price-amount">₹ 1000.00</div>
+                                    <div class="stream-description-lines">
+                                        <div class="stream-desc-line">Charge ur account and use the</div>
+                                        <div class="stream-desc-line">Minute for more streaming</div>
+                                    </div>
+                                </div>
+                                <div class="add-cart-button">Add To Cart</div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- Right Sidebar -->
+                <aside class="right-sidebar-column">
+                    <!-- My Cart Section -->
+                    <div class="sidebar-title-text">My Cart</div>
+                    <div class="cart-items-list">
+                        <div class="cart-item">
+                            <div class="cart-item-icon"></div>
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">card 1</div>
+                                <div class="cart-item-subtitle">Subtitle</div>
+                            </div>
+                            <div class="cart-item-badge-green">5%</div>
+                            <div class="cart-item-badge-red">OFF</div>
+                            <div class="cart-item-prices">
+                                <div class="cart-price-old">₹ 500</div>
+                                <div class="cart-price-new">₹ 450</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-icon"></div>
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">Gold list</div>
+                                <div class="cart-item-subtitle">100 Songs</div>
+                            </div>
+                            <div class="cart-item-badge-green">5%</div>
+                            <div class="cart-item-badge-red"></div>
+                            <div class="cart-item-prices">
+                                <div class="cart-price-old">₹ 475.00</div>
+                                <div class="cart-price-new">₹ 500.00</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-icon"></div>
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">Silver</div>
+                                <div class="cart-item-subtitle">Playlist</div>
+                            </div>
+                            <div class="cart-item-badge-green">5%</div>
+                            <div class="cart-item-badge-red"></div>
+                            <div class="cart-item-prices">
+                                <div class="cart-price-old">₹ 475.00</div>
+                                <div class="cart-price-new">₹ 500.00</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-icon"></div>
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">Upgrade</div>
+                                <div class="cart-item-subtitle">Playlist</div>
+                            </div>
+                            <div class="cart-item-badge-green">5%</div>
+                            <div class="cart-item-badge-red"></div>
+                            <div class="cart-item-prices">
+                                <div class="cart-price-old">₹ 475.00</div>
+                                <div class="cart-price-new">₹ 1000.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details Section 1 -->
+                    <div class="sidebar-title-text">Payment Details</div>
+                    <div class="payment-details-box">
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Account Upgrade</div>
+                            <div class="detail-value">€ 50.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Discount 0%</div>
+                            <div class="detail-value">€ 0.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label-icon">
+                                <div class="detail-icon-small"></div>
+                                <div class="detail-label">YekBun 5%</div>
+                            </div>
+                            <div class="detail-value">€ 0.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Subtotal Net</div>
+                            <div class="detail-value">€ 50.00</div>
+                        </div>
+                        <div class="payment-total-row">
+                            <div class="total-label">To Pay</div>
+                            <div class="total-amount">€ 54.00</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button-box">Check Out</div>
+
+                    <!-- Payment Details Section 2 -->
+                    <div class="sidebar-title-text">Payment Details</div>
+                    <div class="payment-details-box">
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Account Upgrade</div>
+                            <div class="detail-value">₹ 50.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Discount 0%</div>
+                            <div class="detail-value">₹ 0.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label">Subtotal Net</div>
+                            <div class="detail-value">₹ 50.00</div>
+                        </div>
+                        <div class="payment-detail-row">
+                            <div class="detail-label-icon">
+                                <div class="detail-icon-small"></div>
+                                <div class="detail-label">YekBun 5%</div>
+                            </div>
+                            <div class="detail-value-green">₹ 4.00</div>
+                        </div>
+                        <div class="payment-total-row">
+                            <div class="total-label">To Pay</div>
+                            <div class="total-amount-green">₹ 54.00</div>
+                        </div>
+                        <div class="payment-balance-row">
+                            <div class="balance-label">for Balance</div>
+                            <div class="balance-amount">₹ 1000.00</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button-box">Check Out</div>
+                    <div class="cashback-info-line">
+                        <div class="cashback-icon-small"></div>
+                        <div class="cashback-text">₹ 85.00 Cashback after Checkout</div>
+                    </div>
+
+                    <!-- Payment Methods Section -->
+                    <div class="sidebar-title-text">Payment Methods</div>
+                    <div class="payment-methods-box">
+                        <div class="payment-method-item">
+                            <div class="payment-icon-box"></div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">My Balance</div>
+                                <div class="payment-method-amount">959 999.00</div>
+                            </div>
+                            <div class="payment-check"></div>
+                        </div>
+                        <div class="payment-method-item">
+                            <div class="payment-icon-box"></div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">Pay in Store</div>
+                                <div class="payment-method-subtitle">Select on of our Payment Methods</div>
+                            </div>
+                            <div class="payment-check"></div>
+                        </div>
+                        <div class="payment-method-item">
+                            <div class="payment-icon-box"></div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">Bank Transfer</div>
+                                <div class="payment-method-subtitle">Select on of our Payment Methods</div>
+                            </div>
+                            <div class="payment-check"></div>
+                        </div>
+                        <div class="payment-method-item">
+                            <div class="payment-icon-box"></div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">PayPal</div>
+                                <div class="payment-method-subtitle">Select on of our Payment Methods</div>
+                            </div>
+                            <div class="payment-check"></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
