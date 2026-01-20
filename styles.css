@@ -441,58 +441,28 @@ body {
 .section-header-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: flex-end;
+    /* Align bottom of subtitle with bottom of toggle */
+    margin-bottom: 30px;
+    /* Increased slightly for better separation */
 }
 
 .section-header-left {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .section-subtitle-text {
-    font-size: 13px;
+    font-size: 14px;
     color: #666;
+    font-weight: 500;
 }
 
 .section-header-right {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.plan-toggle-pills {
-    display: flex;
-    gap: 8px;
-}
-
-.toggle-pill {
-    padding: 6px 16px;
-    background-color: #E0E0E0;
-    border-radius: 14px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #666;
-    cursor: pointer;
-}
-
-.cashback-badge {
-    padding: 5px 12px;
-    background-color: #00D9A3;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #FFFFFF;
-}
-
-.free-month-badge {
-    padding: 5px 12px;
-    background-color: #00D9A3;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #FFFFFF;
+    gap: 12px;
 }
 
 /* Three Column Grid */
@@ -502,40 +472,45 @@ body {
     gap: 18px;
 }
 
+.partner-shops-section {
+    margin-bottom: 35px;
+}
+
 /* Shop Cards */
 .shop-card {
     background-color: #FFFFFF;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
 }
 
-.shop-image-box {
+.shop-card-image {
     width: 100%;
-    height: 160px;
-    background-color: #D0D0D0;
+    height: 180px;
+    object-fit: cover;
 }
 
 .shop-footer-row {
-    padding: 14px;
+    padding: 16px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
 }
 
-.shop-user-avatar {
-    width: 50px;
-    height: 50px;
-    background-color: #4A90E2;
+.shop-logo {
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .shop-info-column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 .shop-name-row {
@@ -545,294 +520,447 @@ body {
 }
 
 .shop-name-text {
-    width: 140px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.verify-badge {
+    width: 14px;
     height: 14px;
-    background-color: #E0E0E0;
-    border-radius: 4px;
 }
 
-.verified-icon {
-    width: 16px;
-    height: 16px;
-    background-color: #00D9A3;
+.shop-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-meta-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.shop-flag-icon {
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
-.shop-rating-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.shop-location-text {
+    font-size: 11px;
+    color: #888;
 }
 
-.rating-badge {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background-color: #FFF3CD;
-    padding: 4px 8px;
-    border-radius: 8px;
+.meta-divider {
+    font-size: 10px;
+    color: #CCC;
 }
 
-.star-icon-small {
+.shop-star-icon {
     width: 12px;
     height: 12px;
-    background-color: #FFD700;
-    border-radius: 2px;
 }
 
-.rating-number {
-    width: 25px;
-    height: 11px;
-    background-color: #E0E0E0;
-    border-radius: 3px;
+.shop-rating-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
 }
 
-.review-count {
-    width: 20px;
-    height: 10px;
-    background-color: #F0F0F0;
-    border-radius: 3px;
+.rating-count {
+    color: #999;
+    font-weight: 400;
 }
 
-.status-badge {
-    width: 70px;
-    height: 18px;
-    background-color: #00D9A3;
-    border-radius: 9px;
+.shop-status-badge {
+    padding: 3px 8px;
+    background-color: #E6FFF5;
+    color: #00D9A3;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.shop-actions {
+.shop-actions-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    margin-right: 6px;
 }
 
 .shop-heart-icon {
-    width: 32px;
-    height: 32px;
-    background-color: #FFE5E5;
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
 }
 
-.shop-number {
-    width: 30px;
-    height: 12px;
-    background-color: #E0E0E0;
-    border-radius: 4px;
+.shop-like-count {
+    font-size: 10px;
+    font-weight: 700;
+    color: #333;
 }
 
-/* Plan Cards */
-.plan-card-box {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+/* Additional Header Styles for Choice Plan */
+/* Choice Plan Header Options */
+.header-plan-options {
+    display: flex;
+    gap: 30px;
+    /* Space between Monthly and Yearly columns */
+}
+
+.plan-option-col {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: flex-start;
+    /* Left align label with badge */
+    gap: 5px;
+}
+
+.option-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7A869A;
+    /* Blue-grey color from reference */
+    padding-left: 2px;
+    /* Slight alignment adjustment */
+}
+
+.option-badge {
+    padding: 6px 12px;
+    background-color: #E6FFF5;
+    color: #00D9A3;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Plan Cards Main Styles */
+/* Plan Cards Main Styles */
+.plan-card-box {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #F0F0F0;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.cultivated-card {
+    border-top: none;
+}
+
+.educated-card {
+    border-top: none;
+}
+
+.academic-card {
+    border-top: none;
+}
+
+.badge-currently-activated {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    background-color: #00D9A3;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 24px 8px 16px;
+    border-radius: 20px 20px 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 217, 163, 0.3);
+}
+
+.border-top-red {
+    border-top: 5px solid #FF4B4B;
+}
+
+.border-top-orange {
+    border-top: 5px solid #FF9F2D;
+}
+
+.border-top-green {
+    border-top: 5px solid #00E0A6;
+}
+
+/* ... existing styles ... */
+
+.plan-button-current-green {
+    width: 100%;
+    padding: 18px;
+    background-color: #00D9A3;
+    color: #FFFFFF;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 4px 15px rgba(0, 217, 163, 0.4);
+    font-family: 'Genos', sans-serif;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.plan-button-cart-green {
+    width: 100%;
+    padding: 18px;
+    background-color: #00D9A3;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    transition: transform 0.1s;
+    font-family: 'Genos', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 217, 163, 0.4);
+}
+
+.plan-button-cart-green:active {
+    transform: scale(0.98);
 }
 
 .plan-top-badge-green {
-    padding: 5px 14px;
-    background-color: #00D9A3;
-    border-radius: 14px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #FFFFFF;
-    text-align: center;
+    display: inline-flex;
+    padding: 6px 12px;
+    background-color: #E6FFF5;
+    color: #00D9A3;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    align-self: flex-start;
 }
 
 .plan-header-with-toggle {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .monthly-yearly-toggle {
     display: flex;
-    gap: 4px;
-    background-color: #F0F0F0;
-    padding: 4px;
-    border-radius: 12px;
+    background-color: #F5F5F5;
+    padding: 3px;
+    border-radius: 8px;
 }
 
 .toggle-option {
-    padding: 4px 12px;
-    background-color: #F0F0F0;
-    border-radius: 10px;
+    padding: 5px 12px;
     font-size: 11px;
-    font-weight: 500;
-    color: #666;
+    font-weight: 600;
+    color: #999;
     cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.toggle-option.active-toggle {
+    background-color: #FFFFFF;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .plan-title-large {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 8px;
+    color: #1A1A1A;
+    margin-bottom: 5px;
+    line-height: 1.1;
 }
 
 .plan-access-text {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.plan-access-text.color-green {
     color: #00D9A3;
-    margin-bottom: 12px;
 }
 
 .plan-price-row-large {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 15px;
 }
 
-.currency-icon-plan {
+.currency-icon-large {
     width: 28px;
-    height: 28px;
-    background-color: #FFD700;
-    border-radius: 6px;
+    height: auto;
+    margin-top: 8px;
 }
 
 .price-large-text {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
+    font-size: 56px;
+    font-weight: 800;
+    color: #1A1A1A;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .plan-description-lines {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
+    margin-bottom: 20px;
 }
 
 .desc-line {
-    font-size: 12px;
-    color: #666;
+    font-size: 15px;
+    color: #555;
     line-height: 1.5;
+    font-weight: 500;
+}
+
+.plan-divider {
+    height: 1px;
+    background-color: #E6FFF5;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Icon Grids */
-.plan-icons-grid-6 {
+.plan-icons-grid-6,
+.plan-icons-grid-9 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .plan-icons-grid-9 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-/* Red Theme Icons */
-.plan-icon-red {
+.plan-icon-box {
     width: 100%;
     aspect-ratio: 1;
-    background-color: #FFE5E5;
-    border-radius: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
 }
 
-/* Orange Theme Icons */
-.plan-icon-orange {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: #FFF3E0;
-    border-radius: 8px;
+.bg-red-light {
+    background-color: #FFF5F5;
 }
 
-/* Green Theme Icons */
-.plan-icon-green {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: #E8F5F1;
-    border-radius: 8px;
+.bg-orange-light {
+    background-color: #FFF9F2;
+}
+
+.bg-green-light {
+    background-color: #F0FFFA;
+}
+
+.plan-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 /* Features List */
 .plan-features-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 14px;
+    margin-bottom: 30px;
 }
 
-/* Red Theme Features */
-.feature-item-red {
-    padding-left: 20px;
-    position: relative;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.feature-item-red::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #FF3B30;
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
     font-weight: 600;
+    color: #333;
 }
 
-/* Orange Theme Features */
-.feature-item-orange {
-    padding-left: 20px;
-    position: relative;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 8px;
+.check-red {
+    color: #FF4B4B;
+    font-weight: 900;
+    font-size: 14px;
 }
 
-.feature-item-orange::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #FF9500;
-    font-weight: 600;
+.check-orange {
+    color: #FF9F2D;
+    font-weight: 900;
+    font-size: 14px;
 }
 
-/* Green Theme Features */
-.feature-item-green {
-    padding-left: 20px;
-    position: relative;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 8px;
+.check-green {
+    color: #00E0A6;
+    font-weight: 900;
+    font-size: 14px;
 }
 
-.feature-item-green::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #00D9A3;
-    font-weight: 600;
-}
-
-/* Plan Buttons */
+/* Buttons */
 .plan-button-current {
     width: 100%;
-    padding: 12px;
-    background-color: #00D9A3;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #FFFFFF;
+    padding: 18px;
+    background-color: #F2F2F2;
+    color: #AAAAAA;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
     text-align: center;
-    cursor: pointer;
+    margin-top: auto;
 }
 
 .plan-button-cart {
     width: 100%;
-    padding: 12px;
-    background-color: #00D9A3;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 18px;
+    background-color: #1A1A1A;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
     color: #FFFFFF;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    transition: transform 0.1s;
 }
 
-/* Package Cards */
+.plan-button-cart:active {
+    transform: scale(0.98);
+}
+
+.btn-cart-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Package Cards (kept for reference if needed elsewhere, or if part of this section) */
 .package-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -1070,10 +1198,11 @@ body {
 
 
 /* Right Sidebar Cart */
-.right-align-title {
-    text-align: right;
-    width: 100%;
-    margin-right: 18px;
+.sidebar-title-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .cart-items-list {
