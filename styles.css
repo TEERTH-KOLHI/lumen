@@ -71,31 +71,31 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
-    border-radius: 16px;
-    padding: 25px;
+    background: linear-gradient(90deg, #00AEEF 0%, #0077C8 100%);
+    border-radius: 20px;
+    padding: 20px;
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 /* User Card */
 .user-card-large {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    padding: 20px;
+    background-color: transparent;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    min-width: 180px;
+    gap: 10px;
+    min-width: 150px;
 }
 
 .user-avatar-large {
     width: 100px;
     height: 100px;
-    background-color: #E0E0E0;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .user-info-box {
@@ -104,11 +104,11 @@ body {
 }
 
 .user-name-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .user-location-row {
@@ -121,13 +121,14 @@ body {
 .flag-icon {
     width: 20px;
     height: 14px;
-    background-color: #FFD700;
+    object-fit: contain;
     border-radius: 2px;
 }
 
 .location-text {
     font-size: 12px;
-    color: #666;
+    color: #FFFFFF;
+    font-weight: 400;
 }
 
 /* Info Cards Row */
@@ -141,7 +142,7 @@ body {
     background-color: #FFFFFF;
     border-radius: 12px;
     padding: 14px;
-    width: 170px;
+    width: 230px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -153,13 +154,19 @@ body {
     align-items: center;
 }
 
+.educated-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
 .badge-green {
     padding: 4px 12px;
-    background-color: #00D9A3;
+    background-color: #FFFFFF;
     border-radius: 11px;
     font-size: 11px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #333;
     text-align: center;
 }
 
@@ -176,7 +183,12 @@ body {
 .card-free-text {
     font-size: 13px;
     font-weight: 500;
-    color: #333;
+    color: #00D9A3;
+    background-color: rgba(0, 217, 163, 0.15);
+    padding: 4px 12px;
+    border-radius: 12px;
+    width: fit-content;
+    display: inline-block;
 }
 
 .card-monthly-text {
@@ -186,7 +198,13 @@ body {
 
 .card-renew-text {
     font-size: 10px;
-    color: #999;
+    color: #00D9A3;
+    background-color: rgba(0, 217, 163, 0.15);
+    padding: 4px 12px;
+    border-radius: 12px;
+    width: fit-content;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .card-price-row {
@@ -198,31 +216,27 @@ body {
 .currency-icon {
     width: 20px;
     height: 20px;
-    background-color: #FFD700;
-    border-radius: 4px;
+    object-fit: contain;
 }
 
 .price-text {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     color: #333;
 }
 
 .cashback-text {
-    padding: 4px 10px;
-    background-color: #00D9A3;
-    border-radius: 8px;
     font-size: 11px;
     font-weight: 600;
-    color: #FFFFFF;
-    text-align: center;
-    display: inline-block;
+    color: #00D9A3;
 }
 
 .deactivated-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 6px;
 }
 
 .deactivated-text {
@@ -232,10 +246,22 @@ body {
 }
 
 .toggle-switch {
-    width: 40px;
-    height: 20px;
-    background-color: #E0E0E0;
-    border-radius: 10px;
+    width: 28px;
+    height: 16px;
+    background-color: #FF3B30;
+    border-radius: 20px;
+    position: relative;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
 }
 
 /* CULTIVATED Card */
@@ -249,11 +275,7 @@ body {
     gap: 8px;
 }
 
-.card-content-empty {
-    height: 80px;
-    background-color: #F8F8F8;
-    border-radius: 8px;
-}
+
 
 /* Free List Card */
 .info-card-freelist {
@@ -266,11 +288,23 @@ body {
     gap: 8px;
 }
 
+.card-top-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
 .card-icon-check {
     width: 36px;
     height: 36px;
-    background-color: #00D9A3;
-    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.card-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .card-title-text {
@@ -286,26 +320,26 @@ body {
 
 .badge-row {
     display: flex;
-    gap: 6px;
+    gap: 4px;
 }
 
 .badge-free {
     padding: 4px 10px;
-    background-color: #00D9A3;
+    background-color: rgba(0, 217, 163, 0.15);
     border-radius: 10px;
     font-size: 10px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #00D9A3;
     text-align: center;
 }
 
 .badge-onsale {
     padding: 4px 10px;
-    background-color: #FFD700;
+    background-color: rgba(0, 217, 163, 0.15);
     border-radius: 10px;
     font-size: 10px;
     font-weight: 600;
-    color: #333;
+    color: #00D9A3;
     text-align: center;
 }
 
@@ -321,33 +355,34 @@ body {
     border-radius: 12px;
     padding: 14px;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 8px;
     width: 200px;
 }
 
 .balance-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #4A90E2;
-    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .cashback-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #FF9500;
-    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .balance-info {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .balance-label {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 6px;
+    font-size: 14px;
+    color: #7F8C8D;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 .balance-amount-row {
@@ -359,8 +394,7 @@ body {
 .currency-icon-small {
     width: 18px;
     height: 18px;
-    background-color: #FFD700;
-    border-radius: 4px;
+    object-fit: contain;
 }
 
 .amount-text {
@@ -373,6 +407,7 @@ body {
 .qr-code-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -380,13 +415,14 @@ body {
     font-size: 13px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
 
 .qr-code-box {
-    background-color: #FFFFFF;
     border-radius: 12px;
     width: 120px;
     height: 120px;
+    object-fit: contain;
 }
 
 /* Content Sections */
