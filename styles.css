@@ -12,19 +12,22 @@ body {
 }
 
 .dashboard-container {
-    max-width: 1440px;
+    max-width: 100vw;
     margin: 0 auto;
     background-color: #FFFFFF;
+    width: 100%;
+    padding: 0;
 }
 
 /* Top Bar */
 .top-bar {
     background-color: #FFFFFF;
-    padding: 15px 30px;
+    padding: 15px 1.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #E5E5E5;
+    max-width: 100%;
 }
 
 .navbar-logo {
@@ -55,18 +58,36 @@ body {
 
 /* Content Wrapper */
 .content-wrapper {
-    padding: 20px 30px;
+    padding: 15px 1.5%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* Two Column Layout */
 .two-column-layout {
     display: flex;
-    gap: 25px;
+    gap: 1.5%;
     align-items: flex-start;
+    max-width: 100%;
+    overflow: visible;
 }
 
 .main-column {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.main-column>* {
+    max-width: 100%;
+}
+
+.right-sidebar-column {
+    flex: 0 0 auto;
+    width: 300px;
+    min-width: 280px;
+    max-width: 300px;
 }
 
 /* Hero Section */
@@ -469,7 +490,10 @@ body {
 .three-col-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .partner-shops-section {
@@ -479,16 +503,22 @@ body {
 /* Shop Cards */
 .shop-card {
     background-color: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 24px;
+    /* More rounded */
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    aspect-ratio: auto;
+    /* Let content dictate height but keep min height */
+    min-height: 200px;
 }
 
 .shop-card-image {
     width: 100%;
-    height: 180px;
+    height: 150px;
+    /* Fixed height for consistency */
     object-fit: cover;
 }
 
@@ -523,6 +553,10 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #1A1A1A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .verify-badge {
@@ -530,16 +564,24 @@ body {
     height: 14px;
 }
 
+/* Meta Row - Single Line Compact Layout */
 .shop-meta-row {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5px;
+    /* Little space between group and badge */
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 .shop-meta-group {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
+    /* Little space between internal items */
+    flex-shrink: 0;
 }
 
 .shop-flag-icon {
@@ -552,11 +594,14 @@ body {
 .shop-location-text {
     font-size: 11px;
     color: #888;
+    white-space: nowrap;
 }
 
 .meta-divider {
     font-size: 10px;
     color: #CCC;
+    margin: 0 1px;
+    /* Minimal margin around divider */
 }
 
 .shop-star-icon {
@@ -568,6 +613,10 @@ body {
     font-size: 11px;
     font-weight: 700;
     color: #333;
+    display: flex;
+    /* Ensure rating and count stay together */
+    gap: 3px;
+    white-space: nowrap;
 }
 
 .rating-count {
@@ -575,13 +624,39 @@ body {
     font-weight: 400;
 }
 
+.shop-actions-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-left: auto;
+    /* Push to right */
+    min-width: 30px;
+}
+
+.shop-heart-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.shop-like-count {
+    font-size: 10px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
 .shop-status-badge {
-    padding: 3px 8px;
-    background-color: #E6FFF5;
-    color: #00D9A3;
+    padding: 2px 5px;
+    /* Reduced padding */
+    background-color: #E6F9EF;
+    color: #00C853;
     font-size: 9px;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    line-height: 1;
+    /* Tighter line height */
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -698,6 +773,10 @@ body {
     margin-top: 20px;
     padding-top: 40px;
     /* Ensure content doesn't overlap absolute elements */
+    max-width: 100%;
+    min-width: 0;
+    /* Allow shrinking in grid */
+    box-sizing: border-box;
 }
 
 .cultivated-card {
@@ -2200,8 +2279,18 @@ body {
 
 .zer-price-text {
     font-size: 32px;
+    margin-bottom: 35px;
+    width: 100%;
     font-weight: 800;
     color: #1A1A1A;
+}
+
+.partner-shops-grid {
+    display: grid;
+    /* Wider cards */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .zer-icons-grid {
@@ -2324,6 +2413,11 @@ body {
     display: flex;
     gap: 12px;
     align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
 }
 
 .user-card-large {
@@ -2331,7 +2425,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-width: 130px;
+    min-width: 100px;
+    max-width: 130px;
+    flex-shrink: 1;
     text-align: center;
 }
 
@@ -2393,7 +2489,9 @@ body {
 
 .info-card-educated {
     width: 180px;
-    flex-shrink: 0;
+    max-width: 180px;
+    min-width: 140px;
+    flex-shrink: 1;
 }
 
 .card-header-row {
@@ -2511,12 +2609,16 @@ body {
 
 .info-card-cultivated {
     width: 115px;
-    flex-shrink: 0;
+    max-width: 115px;
+    min-width: 90px;
+    flex-shrink: 1;
 }
 
 .info-card-freelist {
     width: 115px;
-    flex-shrink: 0;
+    max-width: 115px;
+    min-width: 90px;
+    flex-shrink: 1;
 }
 
 .card-top-row {
@@ -2574,7 +2676,9 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 175px;
-    flex-shrink: 0;
+    max-width: 175px;
+    min-width: 140px;
+    flex-shrink: 1;
     align-self: stretch;
 }
 
@@ -2630,7 +2734,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 95px;
+    min-width: 70px;
+    max-width: 95px;
+    flex-shrink: 1;
     margin-left: auto;
     align-self: center;
 }
@@ -2649,4 +2755,331 @@ body {
     padding: 0;
     display: block;
     object-fit: contain;
+}
+
+/* Hide mobile sidebar toggle on desktop */
+.mobile-sidebar-toggle {
+    display: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .dashboard-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Hero Section - 2 column layout */
+    .hero-section {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .user-card-large {
+        min-width: 45%;
+    }
+
+    .info-card-educated {
+        width: 48%;
+    }
+
+    .info-card-cultivated,
+    .info-card-freelist {
+        width: 48%;
+    }
+
+    .balance-cards-column {
+        width: 48%;
+    }
+
+    .qr-code-section {
+        width: 48%;
+        margin-left: 0;
+    }
+
+    /* Partner Shops - 2 per row */
+    .partner-shops-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Plan Cards - 2 per row */
+    .plan-cards-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .plan-card-box {
+        width: 48%;
+    }
+
+    /* Package Cards - 2 per row */
+    .packages-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .package-card-box {
+        width: 48%;
+    }
+
+    /* Sidebar */
+    .sidebar-right {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .dashboard-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navbar-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Hero Section - Stack vertically */
+    .hero-section {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .user-card-large {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .info-cards-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .info-card-educated,
+    .info-card-cultivated,
+    .info-card-freelist {
+        width: 100%;
+    }
+
+    .balance-cards-column {
+        width: 100%;
+    }
+
+    .qr-code-section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Section Titles */
+    .section-title-bar {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    /* Partner Shops - 1 per row */
+    .partner-shops-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Plan Cards - Stack vertically */
+    .plan-cards-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .plan-card-box {
+        width: 100%;
+    }
+
+    /* Package Cards - 1 per row */
+    .packages-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .package-card-box {
+        width: 100%;
+    }
+
+    /* Music Playlist - 1 per row */
+    .music-cards-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .music-card {
+        width: 100%;
+    }
+
+    /* Streaming Minutes - 1 per row */
+    .streaming-cards-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .streaming-card {
+        width: 100%;
+    }
+
+    /* Sidebar - Hide on mobile, show toggle button instead */
+    .sidebar-right {
+        display: none;
+    }
+
+    /* Show sidebar toggle button on mobile */
+    .mobile-sidebar-toggle {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #00D9A3;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        box-shadow: 0 4px 12px rgba(0, 217, 163, 0.4);
+        cursor: pointer;
+        z-index: 1000;
+        font-weight: 600;
+    }
+
+    /* When sidebar is shown on mobile */
+    .sidebar-right.mobile-show {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 90%;
+        max-width: 400px;
+        background: white;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    /* Cart Items */
+    .cart-item {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .cart-item-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Payment Methods */
+    .method-card {
+        padding: 12px;
+    }
+
+    .method-icon-large {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Typography Adjustments */
+    .user-name-text {
+        font-size: 16px;
+    }
+
+    .plan-title-large {
+        font-size: 20px;
+    }
+
+    .package-title-text {
+        font-size: 14px;
+    }
+
+    /* Buttons */
+    .plan-button-cart-green,
+    .add-cart-button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (< 480px) */
+@media (max-width: 479px) {
+    .hero-section {
+        padding: 12px;
+    }
+
+    .user-avatar-large {
+        width: 70px;
+        height: 70px;
+    }
+
+    .info-card-educated,
+    .info-card-cultivated,
+    .info-card-freelist {
+        padding: 10px;
+    }
+
+    .section-title-bar {
+        font-size: 16px;
+    }
+
+    .plan-title-large {
+        font-size: 18px;
+    }
+}
+
+/* Resize Plan Icons to prevent overflow */
+.plan-icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    /* Reduced gap from 8px */
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.plan-icon-box {
+    width: 26px;
+    /* Reduced from 32px */
+    height: 26px;
+    /* Reduced from 32px */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.plan-icon-img {
+    width: 14px;
+    /* Reduced from 18px */
+    height: 14px;
+    /* Reduced from 18px */
+    object-fit: contain;
+}
+
+/* Background colors for icons */
+.bg-red-light {
+    background-color: #FFF5F5;
+}
+
+.bg-orange-light {
+    background-color: #FFF8F0;
+}
+
+.bg-green-light {
+    background-color: #F0FDF4;
 }
