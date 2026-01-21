@@ -1008,223 +1008,401 @@ body {
 }
 
 /* Package Cards (kept for reference if needed elsewhere, or if part of this section) */
+/* Package Cards */
 .package-card-box {
     background-color: #FFFFFF;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EDEDED;
 }
 
 .package-image-large {
     width: 100%;
-    height: 150px;
-    background-color: #D0D0D0;
+    height: 180px;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Gradients/Images for Standard Packages */
+.bg-bronze {
+    background: linear-gradient(135deg, #E6A57E 0%, #A9684C 100%);
+    /* Placeholder for actual bronze gradient */
+}
+
+.bg-silver {
+    background: linear-gradient(135deg, #DEE4E8 0%, #99AAB5 100%);
+}
+
+.bg-gold {
+    background: linear-gradient(135deg, #FAD961 0%, #F76B1C 100%);
+    /* Brighter gold gradient */
+    background: linear-gradient(135deg, #9C7829 0%, #FBF1A9 50%, #9C7829 100%);
+}
+
+/* Backgrounds for Business Packages - textures are hard without images, using gradients/colors */
+.bg-business-pack-1 {
+    /* Low Poly / Geometric Silver */
+    background-image: url('assets/business-backgrounds/bg-poly.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-business-pack-2 {
+    /* Brushed Metal Silver */
+    background-image: url('assets/business-backgrounds/bg-metal.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-business-pack-3 {
+    /* Dark Geometric Gold/Bronze Background */
+    background-image: url('assets/business-backgrounds/bg-gold-geo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.coin-img-large {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
 }
 
 .package-info-area {
-    padding: 14px;
+    padding: 20px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .package-title-text {
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #1A1A1A;
+    margin-bottom: 2px;
 }
 
 .package-price-label {
     font-size: 11px;
     color: #999;
-    margin-bottom: 6px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-align: right;
+    margin-top: -20px;
+    /* Pulling price label up as per design layout? No, design has Name left, Price label right */
+    display: flex;
+    justify-content: flex-end;
 }
 
 .price-row {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    margin-top: 5px;
 }
 
-.price-old-text {
-    font-size: 13px;
-    color: #999;
-    text-decoration: line-through;
+.price-zer-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.price-new-text {
-    font-size: 15px;
-    font-weight: 600;
+.currency-zer-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.price-zer-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFC107;
+    /* Yellow/Gold Zer color */
+}
+
+.price-euro-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.currency-euro-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.price-euro-text {
+    font-size: 18px;
+    font-weight: 700;
     color: #00D9A3;
+    /* Green color */
 }
 
 .package-subtitle-text {
     font-size: 12px;
-    color: #666;
-    margin-bottom: 10px;
+    color: #7A869A;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .package-icons-row {
     display: flex;
-    gap: 6px;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    /* Or flex-start with gap? Design uses space between or even spacing */
 }
 
 .package-icon-small {
-    width: 24px;
-    height: 24px;
-    background-color: #FFD700;
-    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-icon-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .add-cart-button {
-    width: 100%;
-    padding: 10px;
+    margin: 16px;
+    padding: 12px;
     background-color: #00D9A3;
-    border-radius: 8px;
+    color: white;
     font-size: 14px;
-    font-weight: 600;
-    color: #FFFFFF;
-    text-align: center;
+    font-weight: 800;
+    border-radius: 30px;
+    /* Rounded pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     cursor: pointer;
+    transition: transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0, 217, 163, 0.3);
 }
+
+.add-cart-button:active {
+    transform: scale(0.98);
+}
+
+.pkg-cart-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+
+
 
 /* Music Cards */
 .music-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     position: relative;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Reusing .corner-badge from line 1218 if possible, but defining here to be safe and specific */
 .corner-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 4px 10px;
+    top: 12px;
+    right: 12px;
+    padding: 5px 12px;
     background-color: #00D9A3;
-    border-radius: 11px;
+    border-radius: 20px;
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 700;
     color: #FFFFFF;
-    z-index: 1;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .music-image-large {
     width: 100%;
-    height: 160px;
-    background-color: #D0D0D0;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-img-large {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    z-index: 1;
 }
 
 .music-info-area {
-    padding: 14px;
+    padding: 16px 20px;
+}
+
+.music-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .music-title-text {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
 }
 
-.auto-charge-badge {
-    padding: 3px 10px;
+/* Auto Charge Toggle */
+.toggle-switch-green {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #00D9A3;
-    border-radius: 9px;
-    font-size: 10px;
-    font-weight: 600;
+    padding: 4px 6px 4px 10px;
+    border-radius: 20px;
+    gap: 8px;
+    cursor: pointer;
+    min-width: 90px;
+}
+
+.toggle-label {
+    font-size: 11px;
+    font-weight: 700;
     color: #FFFFFF;
-    display: inline-block;
-    margin-bottom: 8px;
+    white-space: nowrap;
 }
 
-.music-subtitle-text {
-    font-size: 11px;
-    color: #666;
-    margin-bottom: 6px;
+.toggle-track {
+    width: 30px;
+    height: 16px;
+    background-color: #E6E6E6;
+    border-radius: 8px;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.music-songs-count {
-    font-size: 15px;
-    font-weight: 600;
-    color: #FFB800;
-    margin-bottom: 6px;
+.toggle-knob {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.music-price-label {
-    font-size: 11px;
+.music-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4px;
+    margin-bottom: 12px;
+}
+
+.detail-label {
+    font-size: 12px;
     color: #999;
-    margin-bottom: 6px;
+    font-weight: 500;
 }
 
-.music-price-amount {
-    font-size: 15px;
-    font-weight: 600;
-    color: #00D9A3;
+.text-right {
+    text-align: right;
 }
 
-/* Stream Cards */
+.detail-value-large {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFB800;
+    /* Yellow/Gold */
+    display: flex;
+    align-items: center;
+}
+
+.detail-value-large.text-right {
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.currency-icon-inline {
+    width: 14px;
+    height: 14px;
+}
+
+/* Stream Cards - reuse common styles but specific overrides if needed */
 .stream-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     position: relative;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .stream-image-large {
     width: 100%;
-    height: 160px;
-    background-color: #D0D0D0;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .stream-info-area {
-    padding: 14px;
+    padding: 16px 20px;
+}
+
+.stream-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .stream-title-text {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.stream-label-text {
-    font-size: 11px;
-    color: #666;
-    margin-bottom: 6px;
-}
-
-.stream-minutes-count {
     font-size: 16px;
-    font-weight: 600;
-    color: #FFB800;
-    margin-bottom: 6px;
+    font-weight: 700;
+    color: #000;
 }
 
-.stream-price-label {
-    font-size: 11px;
-    color: #999;
-    margin-bottom: 6px;
-}
-
-.stream-price-amount {
-    font-size: 15px;
-    font-weight: 600;
-    color: #00D9A3;
-    margin-bottom: 10px;
+.stream-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4px;
+    margin-bottom: 12px;
 }
 
 .stream-description-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    background-color: #F9F9F9;
+    /* Optional light background for desc */
+    color: #888;
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 0;
+    /* Remove padding if not needed, design shows it plain */
+    background: none;
 }
 
 .stream-desc-line {
     font-size: 11px;
-    color: #666;
-    line-height: 1.4;
+    color: #999;
 }
 
 /* Right Sidebar */
@@ -1341,8 +1519,8 @@ body {
 .price-old {
     font-size: 9px;
     color: #FF3B30;
-    text-decoration: line-through;
 }
+
 
 .cart-price-old {
     font-size: 11px;
