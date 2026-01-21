@@ -835,7 +835,103 @@ body {
     font-weight: 700;
     color: #1A1A1A;
     margin-bottom: 5px;
-    line-height: 1.1;
+    line-height: 1.2;
+}
+
+/* Payment Methods Section */
+.gap-separator {
+    height: 30px;
+}
+
+.methods-title {
+    margin-bottom: 20px;
+}
+
+.method-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    /* Force equal height */
+    box-sizing: border-box;
+}
+
+.method-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.method-icon-large {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.method-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.method-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+}
+
+.method-sub {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 135px;
+    /* Constraint to force wrap */
+}
+
+.action-icon-green {
+    width: 28px;
+    height: 28px;
+    background-color: #E8F7F2;
+    /* Light Green */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon-small {
+    width: 14px;
+    height: 14px;
+}
+
+/* Vertical Action Group for Pay In Store */
+.action-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.action-icon-green-small {
+    width: 28px;
+    height: 28px;
+    background-color: #E8F7F2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-icon-small {
+    width: 16px;
+    height: 16px;
 }
 
 .plan-access-text {
