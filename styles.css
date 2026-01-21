@@ -1476,6 +1476,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0px;
+    min-width: 68px;
+    /* Fixed width to align badges vertically */
 }
 
 .cart-item-name {
