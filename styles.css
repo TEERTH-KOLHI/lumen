@@ -1437,40 +1437,137 @@ body {
     margin-bottom: 25px;
 }
 
+/* Flex Layout for Cart Item */
 .cart-item {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .cart-item-icon {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 50%;
+    /* Circle icon as per image */
 }
 
-.cart-item-info {
+/* Middle Content: Text + Badge */
+.cart-middle-content {
     flex: 1;
     display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between text block and badge */
+}
+
+.cart-text-group {
+    display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0px;
+    /* Tighter vertical spacing */
 }
 
 .cart-item-name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    color: #333;
+    color: #000;
+    line-height: 1.2;
 }
 
 .cart-item-subtitle {
-    font-size: 11px;
+    font-size: 12px;
     color: #999;
+    font-weight: 400;
+}
+
+/* Badge Styling */
+.percent-badge-pill {
+    background-color: #E8F7F2;
+    /* Very light green bg */
+    border-radius: 12px;
+    padding: 2px 8px 2px 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 20px;
+}
+
+.badge-icon-small {
+    width: 12px;
+    height: 12px;
+    /* Adjust size as needed if the SVG has whitespace */
+}
+
+.badge-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: #00D9A3;
+    /* Green text */
+}
+
+/* Right Content: Delete + Price */
+.cart-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 48px;
+    /* Match icon height for alignment */
+    padding-top: 2px;
+    /* Slight offset for delete button */
+}
+
+.delete-btn-red {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* Removed shadow to match others */
+}
+
+.delete-icon-white {
+    width: 100%;
+    height: 100%;
+    /* Filter removed to show SVG colors */
+    display: block;
+}
+
+.cart-price-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+}
+
+.price-current-row {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00D9A3;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+}
+
+.euro-icon-green {
+    width: 14px;
+    height: 14px;
+    filter: brightness(0) saturate(100%) invert(64%) sepia(80%) saturate(464%) hue-rotate(107deg) brightness(88%) contrast(92%);
+}
+
+.price-old-row {
+    font-size: 10px;
+    color: #FF3B30;
+    text-decoration: line-through;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 2px;
 }
 
 .cart-percent-badge {
