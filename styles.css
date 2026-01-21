@@ -2041,4 +2041,60 @@ body {
 .text-right {
     text-align: right;
 }
+
+/* Monthly/Yearly Green Toggle EXACT Design */
+.card-top-toggle-green {
+    display: flex;
+    align-items: center;
+    background-color: #00D9A3;
+    /* Bright Green */
+    border-radius: 4px;
+    /* Small rounded corners as per image */
+    padding: 3px;
+    gap: 4px;
+    cursor: pointer;
+    width: fit-content;
+
+    /* Position Absolute to match the badge on the right */
+    position: absolute;
+    top: 0;
+    left: 12px;
+    /* Offset from left */
+    z-index: 10;
+    margin: 0;
+    border-bottom-left-radius: 8px;
+    /* Slightly more round on bottom like a tab? No, looks like a pill. */
+    /* Wait, looking at image 0, it's a rounded rect. let's stick to border-radius: 6px */
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+/* Adjustments for specific placement if needed */
+.educated-card,
+.academic-card {
+    /* Ensure parent is relative */
+    position: relative;
+}
+
+
+.toggle-text-monthly {
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-left: 6px;
+    /* Space from edge */
+    letter-spacing: 0.3px;
+}
+
+.toggle-pill-white {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    /* Matches outer radius roughly */
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5F6D7E;
+    /* Slate Grey text */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
 }
