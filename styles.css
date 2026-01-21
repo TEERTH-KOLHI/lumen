@@ -1410,7 +1410,8 @@ body {
     width: 280px;
     background-color: #FAFAFA;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
+    /* Reduced to gain width */
 }
 
 .sidebar-title-text {
@@ -1441,20 +1442,23 @@ body {
 .cart-item {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 12px;
+    padding: 8px;
+    /* Reduced to 8px all around */
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    /* Reduced gap from 12px */
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .cart-item-icon {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
     border-radius: 50%;
-    /* Circle icon as per image */
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
 /* Middle Content: Text + Badge */
@@ -1462,15 +1466,16 @@ body {
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 8px;
-    /* Space between text block and badge */
+    gap: 4px;
+    /* Reduced gap from 8px */
+    overflow: hidden;
+    /* Prevent spill */
 }
 
 .cart-text-group {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    /* Tighter vertical spacing */
 }
 
 .cart-item-name {
@@ -1478,37 +1483,39 @@ body {
     font-weight: 700;
     color: #000;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .cart-item-subtitle {
     font-size: 12px;
     color: #999;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 /* Badge Styling */
 .percent-badge-pill {
     background-color: #E8F7F2;
-    /* Very light green bg */
     border-radius: 12px;
-    padding: 2px 8px 2px 4px;
+    padding: 2px 6px;
+    /* Slightly tighter padding */
     display: flex;
     align-items: center;
-    gap: 4px;
-    height: 20px;
+    gap: 3px;
+    height: 18px;
+    /* Slightly smaller height */
+    flex-shrink: 0;
 }
 
 .badge-icon-small {
-    width: 12px;
-    height: 12px;
-    /* Adjust size as needed if the SVG has whitespace */
+    width: 10px;
+    height: 10px;
 }
 
 .badge-text {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     color: #00D9A3;
-    /* Green text */
 }
 
 /* Right Content: Delete + Price */
@@ -1517,10 +1524,10 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    height: 48px;
-    /* Match icon height for alignment */
-    padding-top: 2px;
-    /* Slight offset for delete button */
+    height: 42px;
+    /* Match icon height */
+    padding-top: 0;
+    flex-shrink: 0;
 }
 
 .delete-btn-red {
@@ -1528,13 +1535,11 @@ body {
     height: 14px;
     border-radius: 50%;
     cursor: pointer;
-    /* Removed shadow to match others */
 }
 
 .delete-icon-white {
     width: 100%;
     height: 100%;
-    /* Filter removed to show SVG colors */
     display: block;
 }
 
@@ -1543,6 +1548,44 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 0;
+}
+
+/* Specific Price Layout for Gold List */
+.price-horizontal-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* Reduced gap from 8px */
+    margin-top: auto;
+    /* Push to bottom if container has height */
+}
+
+.zer-icon-yellow {
+    width: 20px;
+    height: 20px;
+    /* Adjust size to match reference */
+}
+
+.price-vertical-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Align numbers to the right */
+    justify-content: center;
+    line-height: 1;
+}
+
+.price-green-bold {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00D9A3;
+}
+
+.price-red-strike {
+    font-size: 11px;
+    font-weight: 600;
+    color: #FF3B30;
+    text-decoration: line-through;
 }
 
 .price-current-row {
