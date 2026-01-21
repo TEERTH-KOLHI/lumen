@@ -1680,32 +1680,30 @@ body {
 /* Payment Details Cards */
 .payment-details-card {
     background-color: #FFFFFF;
-    border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    /* More rounded */
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
 }
 
 .payment-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .p-label {
-    font-size: 13px;
-    color: #777;
+    font-size: 14px;
+    color: #666;
     font-weight: 500;
 }
 
 .p-value {
-    font-size: 13px;
-    color: #555;
+    font-size: 14px;
+    color: #444;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 4px;
 }
 
 .p-label-icon {
@@ -1713,7 +1711,8 @@ body {
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: #777;
+    color: #888;
+    font-weight: 500;
 }
 
 .yek-icon {
@@ -1721,49 +1720,163 @@ body {
     height: 14px;
 }
 
-.divider-line {
+.divider-line-thin {
     height: 1px;
-    background-color: #EEE;
-    margin: 8px 0;
+    background-color: #E0E0E0;
+    margin: 12px 0;
+    width: 100%;
 }
 
-.bold-row .p-label,
-.bold-row .p-value {
-    font-weight: 700;
+.p-label-bold {
+    font-size: 16px;
     color: #333;
-    font-size: 14px;
+    /* Darker for Subtotal */
+    font-weight: 700;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: 15px 0;
+    width: 100%;
 }
 
 .total-row-green {
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .p-label-total {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 800;
     color: #00D9A3;
+    /* Green */
 }
 
 .p-value-total {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 800;
     color: #00D9A3;
+    /* Green */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.small-currency {
+    width: 14px;
+    height: 14px;
+    /* Adjust based on icon */
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #2ED47A 0%, #1CC56B 100%);
+    /* Green Gradient */
+    border: none;
+    border-radius: 30px;
+    /* Pill shape */
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(46, 212, 122, 0.25);
+    transition: transform 0.1s;
+}
+
+/* Zer Payment Details Specifics */
+.flex-align {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.small-currency {
-    width: 12px;
-    height: 12px;
-    filter: brightness(0) saturate(100%) invert(64%) sepia(80%) saturate(464%) hue-rotate(107deg) brightness(88%) contrast(92%);
+.text-red {
+    color: #FF3B30;
 }
 
-.small-currency-gray {
-    width: 11px;
-    height: 11px;
-    filter: grayscale(1);
-    opacity: 0.6;
+.text-green {
+    color: #00D9A3;
+}
+
+/* Icon Filters */
+.currency-gray-icon {
+    width: 13px;
+    height: 13px;
+    filter: invert(42%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(88%) contrast(88%);
+    /* Grey #666 */
+}
+
+.currency-red-icon {
+    width: 13px;
+    height: 13px;
+    filter: invert(34%) sepia(57%) saturate(2256%) hue-rotate(336deg) brightness(98%) contrast(108%);
+    /* Red #FF3B30 */
+}
+
+.currency-green-icon {
+    width: 13px;
+    height: 13px;
+    filter: invert(66%) sepia(61%) saturate(464%) hue-rotate(107deg) brightness(93%) contrast(92%);
+    /* Green #00D9A3 */
+}
+
+/* Balance Row */
+.total-row-orange {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.p-label-orange {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FF9F0A;
+    /* Orange */
+}
+
+.p-value-orange {
+    font-size: 18px;
+    font-weight: 800;
+    color: #00D9A3;
+    /* Green Value */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Cashback Pill */
+.cashback-pill {
+    margin-top: 15px;
+    background-color: #E8F7F2;
+    border-radius: 20px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    /* Reduced to fit in one line */
+    color: #00D9A3;
+    font-weight: 700;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* Force one row */
+}
+
+.cashback-icon {
+    width: 20px;
+    height: 20px;
+    /* The large circle icon on the left */
+}
+
+.cashback-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .text-red {
