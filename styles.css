@@ -643,6 +643,48 @@ body {
 
 /* Plan Cards Main Styles */
 /* Plan Cards Main Styles */
+/* Card Top Toggle (Monthly/Yearly) */
+.card-top-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Flush top-left */
+    display: flex;
+    background-color: #FFFFFF;
+    border: 1px solid #00D9A3;
+    border-radius: 20px;
+    /* Fully rounded/pill shape */
+    margin: 12px;
+    /* Spacing from the edge, similar to image if not flush */
+    /* Looking at image again, it seems effectively flush or very close to top.
+       However, badges are flush. Let's make this stand out slightly or check alignment.
+       The image shows it clearly inside the white area, top left.
+       Actually, image 1768942753608 shows it floating slightly or maybe flush with top border?
+       It looks like a small pill button. Let's try 0 margin first if "exact position" means mirrored badge?
+       Wait, badges are flush top-right. The toggle in image looks like a pill floating at top left.
+       Let's use margin. width: fit-content.
+    */
+    margin: 10px 0 0 10px;
+    /* Slight offset from corner */
+    overflow: hidden;
+    /* Actually, let's look at the "Monthly | Yearly" pill in Header. It's distinct.
+       This one needs green border, Monthly Green bg, Yearly White bg.
+    */
+}
+
+.toggle-item {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-item.active {
+    background-color: #00D9A3;
+    color: #FFFFFF;
+}
+
 .plan-card-box {
     background-color: #FFFFFF;
     border-radius: 24px;
@@ -654,6 +696,8 @@ body {
     border: 1px solid #F0F0F0;
     height: 100%;
     margin-top: 20px;
+    padding-top: 40px;
+    /* Ensure content doesn't overlap absolute elements */
 }
 
 .cultivated-card {
@@ -670,15 +714,18 @@ body {
 
 .badge-currently-activated {
     position: absolute;
-    top: -16px;
+    top: 0;
     right: 0;
     background-color: #00D9A3;
     color: #FFFFFF;
     font-size: 13px;
     font-weight: 700;
-    padding: 8px 24px 8px 16px;
-    border-radius: 20px 20px 0 20px;
-    box-shadow: 0 4px 10px rgba(0, 217, 163, 0.3);
+    padding: 10px 24px;
+    border-radius: 0 24px 0 24px;
+    /* Top-Right matches card, Bottom-Left is rounded style */
+    box-shadow: none;
+    /* Removed shadow for flat look matching image */
+    z-index: 10;
 }
 
 .border-top-red {
@@ -1537,4 +1584,135 @@ body {
     .info-cards-row {
         flex-direction: column;
     }
+}
+
+/* Standard Zer Packages Styles */
+.standard-zer-section {
+    margin-bottom: 35px;
+}
+
+.zer-card-box {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #F0F0F0;
+    height: 100%;
+}
+
+.zer-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.zer-coin-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.zer-coin-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.zer-coin-img {
+    position: relative;
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.zer-plan-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1A1A1A;
+    margin-bottom: 5px;
+}
+
+.zer-plan-subtitle {
+    font-size: 14px;
+    color: #999;
+    font-weight: 500;
+}
+
+.zer-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.zer-currency {
+    width: 24px;
+    height: 24px;
+}
+
+.zer-price-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1A1A1A;
+}
+
+.zer-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.zer-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.zer-btn-add-cart {
+    width: 100%;
+    padding: 16px;
+    background-color: #00D9A3;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    box-shadow: 0 4px 15px rgba(0, 217, 163, 0.4);
+    opacity: 0.9;
+    transition: all 0.2s;
+    font-family: 'Genos', sans-serif;
+}
+
+.zer-btn-add-cart:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.zer-btn-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
 }
