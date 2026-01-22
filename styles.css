@@ -3083,3 +3083,263 @@ body {
 .bg-green-light {
     background-color: #F0FDF4;
 }
+
+/* =========================================
+   Footer Styles
+   ========================================= */
+
+.site-footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+.footer-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Column Widths */
+.brand-col {
+    flex: 2;
+    max-width: 300px;
+}
+
+.links-col {
+    flex: 1.5;
+    min-width: 200px;
+}
+
+.app-col {
+    flex: 1.5;
+    min-width: 200px;
+}
+
+/* Brand Column */
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #667085;
+    font-weight: 400;
+}
+
+/* Headings */
+.footer-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #101828;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.heading-underline {
+    position: relative;
+    width: 50px;
+    height: 2px;
+    /* Container for alignment */
+    display: flex;
+    align-items: center;
+}
+
+.line-blue {
+    width: 100%;
+    height: 2px;
+    background-color: #3b82f6;
+    /* Adjust blue to match design */
+    border-radius: 2px;
+}
+
+.dot-blue {
+    width: 6px;
+    height: 6px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+
+/* Dashed underline for App Section */
+.heading-dashed {
+    position: relative;
+    width: 50px;
+    height: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.dashed-blue {
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px dashed #3b82f6;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links li::before {
+    content: '›';
+    /* Chevron */
+    font-size: 18px;
+    line-height: 1;
+    color: #98A2B3;
+    /* Light gray */
+    margin-top: -2px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #475467;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #3b82f6;
+}
+
+/* App Buttons */
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #4A4F59;
+    /* Dark gray from image */
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: fit-content;
+    min-width: 160px;
+    transition: background-color 0.2s;
+}
+
+.store-btn:hover {
+    background-color: #333;
+}
+
+.store-icon {
+    flex-shrink: 0;
+}
+
+.store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.get-it-on {
+    font-size: 9px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.store-name {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 25px 1.5% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #667085;
+}
+
+.copyright-blue {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    color: #667085;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+    color: #3b82f6;
+}
+
+.legal-divider {
+    color: #E5E5E5;
+    font-size: 12px;
+}
+
+/* Warning/Alert for missing assets */
+/* Since we used CSS/SVG, no broken image placeholder styles needed for buttons */
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
