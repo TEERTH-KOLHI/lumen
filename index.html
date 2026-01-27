@@ -1300,6 +1300,92 @@
             const menuToggle = document.getElementById('menu-toggle');
             const sidebar = document.getElementById('main-sidebar');
             const overlay = document.getElementById('sidebar-overlay');
+            const cartTarget = document.querySelector('.sidebar-title-text.text-right');
+
+            // Fly to Cart Logic
+            function flyToCart(e) {
+                const btn = e.currentTarget;
+                if (!cartTarget) return;
+
+                // Find the nearest card container
+                const card = btn.closest('.plan-card-box, .package-card-box, .zer-card-box, .music-card-box, .stream-card-box, .shop-card, .info-card-educated, .info-card-cultivated, .info-card-freelist');
+
+                if (!card) return;
+
+                // Find the main image in the card (prioritize specific classes)
+                const img = card.querySelector('.feature-img-large, .coin-img-large, .shop-card-image, .educated-icon, .zer-coin-img, img');
+
+                if (img) {
+                    const imgRect = img.getBoundingClientRect();
+                    const cartRect = cartTarget.getBoundingClientRect();
+
+                    // Create Clone
+                    const clone = img.cloneNode(true);
+                    clone.style.position = 'fixed'; // Use fixed to be viewport relative
+                    clone.style.left = imgRect.left + 'px';
+                    clone.style.top = imgRect.top + 'px';
+                    clone.style.width = imgRect.width + 'px';
+                    clone.style.height = imgRect.height + 'px';
+                    clone.style.zIndex = '9999';
+                    clone.style.transition = 'none'; // reset any hover transitions
+                    document.body.appendChild(clone);
+
+                    // Calculate Path
+                    // Start: 0,0 (Relative to clone's fixed position)
+                    // End: deltaX, deltaY
+                    const startX = imgRect.left + (imgRect.width / 2);
+                    const startY = imgRect.top + (imgRect.height / 2);
+                    const endX = cartRect.left + (cartRect.width / 2);
+                    const endY = cartRect.top + (cartRect.height / 2);
+
+                    const deltaX = endX - startX;
+                    const deltaY = endY - startY;
+
+                    // Quadratic Bezier Curve Control Point (e.g., arc up/left)
+                    // We want a nice curve. Let's pick a control point.
+                    // If moving right, maybe arc up.
+                    const controlX = deltaX * 0.2;
+                    const controlY = deltaY - 200; // Arch upwards by 200px
+
+                    // CSS offset-path string
+                    // M startX, startY Q controlX, controlY endX, endY
+                    // But offset-path is relative to the element's position if we align it?
+                    // Actually, offset-path: path('M 0,0 ...') works relative to the element's box in some contexts,
+                    // but usually it expects coordinates in the local coordinate system or viewport depending on implementation.
+                    // Let's use the explicit coordinates and set offset-path on the clone combined with position: fixed top left 0.
+
+                    // Easier Approach: 
+                    // Set clone to top:0, left:0.
+                    // Path moves from Start(imgRect.left...) to End.
+                    clone.style.left = '0';
+                    clone.style.top = '0';
+
+                    // Construct Path
+                    // M startX startY Q ((startX+endX)/2) (startY-200) endX endY
+                    const cpX = (startX + endX) / 2;
+                    const cpY = Math.min(startY, endY) - 200; // Arc above the highest point
+
+                    const pathString = `path("M ${startX},${startY} Q ${cpX},${cpY} ${endX},${endY}")`;
+
+                    clone.style.offsetPath = pathString;
+                    clone.style.offsetRotate = '0deg'; // Keep rotation stable or auto
+
+                    // Trigger Reflow
+                    void clone.offsetWidth;
+
+                    // Add Animation Class
+                    clone.classList.add('product__image--is-flying');
+
+                    // Cleanup
+                    setTimeout(() => {
+                        clone.remove();
+                    }, 800); // Match animation duration
+                }
+            }
+
+            // Bind to all add-cart buttons
+            const addButtons = document.querySelectorAll('.plan-button-cart-green, .zer-btn-add-cart, .add-cart-btn-generic, .add-cart-button'); // Added .add-cart-button
+            addButtons.forEach(btn => btn.addEventListener('click', flyToCart));
 
             function toggleSidebar() {
                 sidebar.classList.toggle('active');

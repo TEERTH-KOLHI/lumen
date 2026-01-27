@@ -22,17 +22,22 @@ body {
 /* Top Bar */
 .top-bar {
     background-color: #FFFFFF;
-    padding: 15px 1.5%;
+    padding: 0 1.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #E5E5E5;
     max-width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Ensure it stays above content */
 }
 
 .navbar-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
 }
 
@@ -88,6 +93,9 @@ body {
     width: 300px;
     min-width: 280px;
     max-width: 300px;
+    position: sticky;
+    top: 80px;
+    /* Offset for sticky navbar (60px) + buffer (20px) */
 }
 
 /* Hero Section */
@@ -99,6 +107,11 @@ body {
     gap: 15px;
     margin-bottom: 30px;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+.hero-section:hover {
+    box-shadow: 0 10px 30px rgba(0, 174, 239, 0.2);
 }
 
 /* User Card */
@@ -167,6 +180,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-card-educated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-header-row {
@@ -294,6 +313,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-card-cultivated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -307,6 +332,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-card-freelist:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-top-row {
@@ -379,6 +410,12 @@ body {
     flex-direction: column;
     gap: 8px;
     width: 200px;
+    transition: all 0.3s ease;
+}
+
+.balance-card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .balance-icon {
@@ -444,6 +481,11 @@ body {
     width: 120px;
     height: 120px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.qr-code-box:hover {
+    transform: scale(1.05);
 }
 
 /* Content Sections */
@@ -513,6 +555,13 @@ body {
     aspect-ratio: auto;
     /* Let content dictate height but keep min height */
     min-height: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.shop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .shop-card-image {
@@ -772,11 +821,16 @@ body {
     height: 100%;
     margin-top: 20px;
     padding-top: 40px;
-    /* Ensure content doesn't overlap absolute elements */
     max-width: 100%;
     min-width: 0;
-    /* Allow shrinking in grid */
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.plan-card-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-color: #00D9A3;
 }
 
 .cultivated-card {
@@ -1618,6 +1672,43 @@ body {
     margin-bottom: 25px;
 }
 
+/* Package Cards */
+.package-card-box {
+    /* Assuming previously defined or needs new definition if missed */
+    /* Based on HTML usage: class="package-card-box" */
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.package-card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.music-card-box,
+.stream-card-box {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.music-card-box:hover,
+.stream-card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Flex Layout for Cart Item */
 .cart-item {
     background-color: #FFFFFF;
@@ -2146,6 +2237,13 @@ body {
     padding: 10px;
     border-radius: 12px;
     margin-bottom: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.method-item:hover {
+    background-color: #F8F9FA;
+    transform: translateX(5px);
 }
 
 .method-icon {
@@ -2214,6 +2312,12 @@ body {
     align-items: center;
     border: 1px solid #F0F0F0;
     height: 100%;
+    transition: all 0.3s ease;
+}
+
+.zer-card-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .zer-card-header {
@@ -3409,5 +3513,25 @@ body {
     .right-sidebar-column.active {
         right: 0;
         /* Slide in */
+    }
+}
+/* Fly to Cart Animation */
+.product__image--is-flying {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+    animation: fly-to-cart 0.8s ease-in-out forwards;
+}
+
+@keyframes fly-to-cart {
+    0% {
+        offset-distance: 0%;
+        opacity: 0.8;
+    }
+
+    100% {
+        offset-distance: 100%;
+        transform: scale(0.1);
+        opacity: 0.5;
     }
 }
