@@ -63,15 +63,15 @@ body {
 
 /* Content Wrapper */
 .content-wrapper {
-    padding: 15px 1.5%;
-    max-width: 1440px;
+    padding: 15px 0.5% 15px 1.5%;
+    max-width: none;
     margin: 0 auto;
 }
 
 /* Two Column Layout */
 .two-column-layout {
     display: flex;
-    gap: 1.5%;
+    gap: 15px;
     align-items: flex-start;
     max-width: 100%;
     overflow: visible;
@@ -90,9 +90,9 @@ body {
 
 .right-sidebar-column {
     flex: 0 0 auto;
-    width: 320px;
-    min-width: 280px;
-    max-width: 320px;
+    width: 260px;
+    min-width: 250px;
+    max-width: 260px;
     position: sticky;
     top: 80px;
     /* Offset for sticky navbar (60px) + buffer (20px) */
@@ -138,7 +138,7 @@ body {
 }
 
 .user-name-text {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 800;
     color: #FFFFFF;
     text-align: center;
@@ -177,11 +177,12 @@ body {
 .info-card-educated {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 14px;
-    width: 230px;
+    padding: 10px 8px;
+    width: fit-content;
+    /* min-width removed */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
 }
 
@@ -192,57 +193,57 @@ body {
 
 .card-header-row {
     display: flex;
-    gap: 8px;
+    gap: 5px;
     align-items: center;
 }
 
 .educated-icon {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
 .badge-green {
-    padding: 4px 12px;
+    padding: 5px 8px;
     background-color: #FFFFFF;
     border-radius: 11px;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
     color: #333;
     text-align: center;
 }
 
 .badge-red {
-    padding: 3px 10px;
+    padding: 4px 6px;
     background-color: #FF3B30;
     border-radius: 10px;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #FFFFFF;
     text-align: center;
 }
 
 .card-free-text {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: #00D9A3;
     background-color: rgba(0, 217, 163, 0.15);
-    padding: 4px 12px;
+    padding: 5px 8px;
     border-radius: 12px;
     width: fit-content;
     display: inline-block;
 }
 
 .card-monthly-text {
-    font-size: 11px;
+    font-size: 14px;
     color: #666;
 }
 
 .card-renew-text {
-    font-size: 10px;
+    font-size: 13px;
     color: #00D9A3;
     background-color: rgba(0, 217, 163, 0.15);
-    padding: 4px 12px;
+    padding: 4px 6px;
     border-radius: 12px;
     width: fit-content;
     display: inline-block;
@@ -256,20 +257,20 @@ body {
 }
 
 .currency-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 }
 
 .price-text {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 800;
     color: #333;
 }
 
 .cashback-text {
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #00D9A3;
 }
 
@@ -310,11 +311,12 @@ body {
 .info-card-cultivated {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 14px;
-    width: 150px;
+    padding: 10px 8px;
+    width: fit-content;
+    /* min-width removed */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
 }
 
@@ -329,11 +331,12 @@ body {
 .info-card-freelist {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 14px;
-    width: 150px;
+    padding: 16px;
+    width: fit-content;
+    /* min-width removed */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
 }
 
@@ -402,16 +405,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: flex-start;
 }
 
 .balance-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 14px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 200px;
+    gap: 10px;
+    width: fit-content;
+    /* min-width removed to fit content strictly */
     transition: all 0.3s ease;
 }
 
@@ -439,9 +444,9 @@ body {
 }
 
 .balance-label {
-    font-size: 14px;
+    font-size: 16px;
     color: #7F8C8D;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0;
 }
 
@@ -458,8 +463,8 @@ body {
 }
 
 .amount-text {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #333;
 }
 
@@ -469,10 +474,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-left: auto;
 }
 
 .qr-title-text {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: #FFFFFF;
     text-align: center;
@@ -481,8 +487,8 @@ body {
 
 .qr-code-box {
     border-radius: 12px;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -1644,7 +1650,7 @@ body {
 
 /* Right Sidebar */
 .right-sidebar-column {
-    width: 320px;
+    width: 260px;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 15px;
@@ -2593,100 +2599,9 @@ body {
     align-items: stretch;
 }
 
-.info-card-educated,
-.info-card-cultivated,
-.info-card-freelist {
-    background: #FFFFFF;
-    border-radius: 16px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
 
-.info-card-educated {
-    width: 180px;
-    max-width: 180px;
-    min-width: 140px;
-    flex-shrink: 1;
-}
 
-.card-header-row {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-bottom: 6px;
-}
 
-.educated-icon {
-    width: 18px;
-    height: 18px;
-}
-
-.badge-green {
-    font-size: 9px;
-    font-weight: 700;
-    color: #4BAE4F;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-}
-
-.badge-red {
-    background-color: #E31D1C;
-    color: #FFF;
-    font-size: 8px;
-    font-weight: 600;
-    padding: 2px 5px;
-    border-radius: 3px;
-    margin-left: auto;
-}
-
-.card-free-text {
-    background-color: #E8F7F2;
-    color: #00D9A3;
-    font-size: 9px;
-    padding: 2px 6px;
-    border-radius: 5px;
-    font-weight: 500;
-    width: fit-content;
-    margin-bottom: 3px;
-}
-
-.card-renew-text {
-    background-color: #E8F7F2;
-    color: #00D9A3;
-    font-size: 9px;
-    padding: 2px 6px;
-    border-radius: 5px;
-    font-weight: 500;
-    width: fit-content;
-    margin-bottom: 6px;
-}
-
-.card-price-row {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    margin-bottom: 1px;
-}
-
-.currency-icon {
-    width: 12px;
-    height: 12px;
-}
-
-.price-text {
-    font-size: 15px;
-    font-weight: 800;
-    color: #111;
-}
-
-.cashback-text {
-    font-size: 9px;
-    color: #00D9A3;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
 
 .deactivated-row {
     display: block;
@@ -2724,155 +2639,7 @@ body {
     border-radius: 50%;
 }
 
-.info-card-cultivated {
-    width: 115px;
-    max-width: 115px;
-    min-width: 90px;
-    flex-shrink: 1;
-}
 
-.info-card-freelist {
-    width: 115px;
-    max-width: 115px;
-    min-width: 90px;
-    flex-shrink: 1;
-}
-
-.card-top-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    margin-bottom: 6px;
-}
-
-.card-icon-check {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-}
-
-.card-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.card-title-text {
-    font-size: 9px;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-transform: uppercase;
-    line-height: 1.1;
-}
-
-.card-subtitle-text {
-    font-size: 8px;
-    font-weight: 500;
-    color: #666;
-    text-transform: uppercase;
-    line-height: 1.1;
-}
-
-.badge-row {
-    display: flex;
-    gap: 4px;
-}
-
-.badge-free,
-.badge-onsale {
-    background-color: #E8F7F2;
-    color: #00D9A3;
-    font-size: 9px;
-    padding: 2px 6px;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-.balance-cards-column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 175px;
-    max-width: 175px;
-    min-width: 140px;
-    flex-shrink: 1;
-    align-self: stretch;
-}
-
-.balance-card-box {
-    background: #FFF;
-    border-radius: 12px;
-    padding: 6px 10px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.balance-info {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 3px;
-}
-
-.balance-icon,
-.cashback-icon {
-    width: 14px;
-    height: 14px;
-}
-
-.balance-label {
-    font-size: 11px;
-    color: #888;
-    font-weight: 500;
-}
-
-.balance-amount-row {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.currency-icon-small {
-    width: 12px;
-    height: 12px;
-}
-
-.amount-text {
-    font-size: 16px;
-    font-weight: 700;
-    color: #111;
-}
-
-.qr-code-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 70px;
-    max-width: 95px;
-    flex-shrink: 1;
-    margin-left: auto;
-    align-self: center;
-}
-
-.qr-title-text {
-    color: #FFF;
-    font-size: 10px;
-    margin-bottom: 5px;
-    opacity: 0.9;
-}
-
-.qr-code-box {
-    width: 65px;
-    height: 65px;
-    border-radius: 8px;
-    padding: 0;
-    display: block;
-    object-fit: contain;
-}
 
 /* Hide mobile sidebar toggle on desktop */
 .mobile-sidebar-toggle {
@@ -3507,9 +3274,9 @@ body {
         /* Override layout hidden */
         position: fixed;
         top: 0;
-        right: -340px;
+        right: -280px;
         /* Hide off-screen */
-        width: 320px;
+        width: 260px;
         height: 100vh;
         z-index: 999;
         transition: right 0.3s ease-in-out;
