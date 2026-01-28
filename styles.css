@@ -1644,7 +1644,7 @@ body {
 
 /* Right Sidebar */
 .right-sidebar-column {
-    width: 280px;
+    width: 340px;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 15px;
@@ -1727,8 +1727,8 @@ body {
 }
 
 .cart-item-icon {
-    width: 42px;
-    height: 42px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
     border-radius: 50%;
     flex-shrink: 0;
@@ -1770,27 +1770,28 @@ body {
 }
 
 /* Badge Styling */
+/* Badge Styling */
 .percent-badge-pill {
     background-color: #E8F7F2;
     border-radius: 12px;
-    padding: 2px 6px;
-    /* Slightly tighter padding */
+    padding: 4px 10px;
+    /* Larger padding */
     display: flex;
     align-items: center;
-    gap: 3px;
-    height: 18px;
-    /* Slightly smaller height */
+    gap: 4px;
+    height: auto;
+    /* Flexible height */
     flex-shrink: 0;
 }
 
 .badge-icon-small {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
 }
 
 .badge-text {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     color: #00D9A3;
 }
 
@@ -1800,15 +1801,15 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    height: 42px;
-    /* Match icon height */
+    min-height: 56px;
+    /* Match new icon height */
     padding-top: 0;
     flex-shrink: 0;
 }
 
 .delete-btn-red {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     cursor: default;
 }
