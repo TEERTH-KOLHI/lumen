@@ -1131,7 +1131,7 @@ body {
 .plan-icons-grid-6,
 .plan-icons-grid-9 {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
     margin-bottom: 20px;
 }
@@ -3166,11 +3166,9 @@ body {
 }
 
 .plan-icon-box {
-    width: 26px;
-    /* Reduced from 32px */
-    height: 26px;
-    /* Reduced from 32px */
-    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3178,10 +3176,8 @@ body {
 }
 
 .plan-icon-img {
-    width: 14px;
-    /* Reduced from 18px */
-    height: 14px;
-    /* Reduced from 18px */
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 }
 
