@@ -63,8 +63,8 @@ body {
 
 /* Content Wrapper */
 .content-wrapper {
-    padding: 15px 0.5% 15px 1.5%;
-    max-width: none;
+    padding: 15px 1.5%;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -90,9 +90,9 @@ body {
 
 .right-sidebar-column {
     flex: 0 0 auto;
-    width: 320px;
-    min-width: 300px;
-    max-width: 320px;
+    width: 290px;
+    min-width: 280px;
+    max-width: 290px;
     position: sticky;
     top: 80px;
     /* Offset for sticky navbar (60px) + buffer (20px) */
@@ -102,13 +102,16 @@ body {
 .hero-section {
     background: linear-gradient(90deg, #00AEEF 0%, #0077C8 100%);
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 30px;
     align-items: center;
     transition: all 0.3s ease;
     width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .hero-section:hover {
@@ -139,11 +142,11 @@ body {
 }
 
 .user-name-text {
-    font-size: 32px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 700;
     color: #FFFFFF;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -155,14 +158,14 @@ body {
 }
 
 .flag-icon {
-    width: 24px;
-    height: 18px;
+    width: 16px;
+    height: 12px;
     object-fit: contain;
     border-radius: 2px;
 }
 
 .location-text {
-    font-size: 24px;
+    font-size: 13px;
     color: #FFFFFF;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -178,13 +181,13 @@ body {
 .info-card-educated {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 10px 8px;
+    padding: 10px;
     width: fit-content;
-    /* min-width removed */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .info-card-educated:hover {
@@ -205,10 +208,10 @@ body {
 }
 
 .badge-green {
-    padding: 5px 8px;
+    padding: 4px 8px;
     background-color: #FFFFFF;
-    border-radius: 11px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: 700;
     color: #333;
     text-align: center;
@@ -312,13 +315,13 @@ body {
 .info-card-cultivated {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 10px 8px;
+    padding: 10px;
     width: fit-content;
-    /* min-width removed */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .info-card-cultivated:hover {
@@ -332,13 +335,13 @@ body {
 .info-card-freelist {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 16px;
+    padding: 12px;
     width: fit-content;
-    min-width: 230px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .info-card-freelist:hover {
@@ -366,7 +369,7 @@ body {
 }
 
 .card-title-text {
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 600;
     color: #333;
 }
@@ -412,13 +415,13 @@ body {
 .balance-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 16px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     width: fit-content;
-    min-width: 230px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .balance-card-box:hover {
@@ -445,7 +448,7 @@ body {
 }
 
 .balance-label {
-    font-size: 24px;
+    font-size: 14px;
     color: #7F8C8D;
     font-weight: 600;
     margin-bottom: 0;
@@ -464,7 +467,7 @@ body {
 }
 
 .amount-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #333;
 }
@@ -479,8 +482,8 @@ body {
 }
 
 .qr-title-text {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     color: #FFFFFF;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -1651,7 +1654,7 @@ body {
 
 /* Right Sidebar */
 .right-sidebar-column {
-    width: 320px;
+    width: 290px;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 15px;
@@ -3275,9 +3278,9 @@ body {
         /* Override layout hidden */
         position: fixed;
         top: 0;
-        right: -340px;
+        right: -310px;
         /* Hide off-screen */
-        width: 320px;
+        width: 290px;
         height: 100vh;
         z-index: 999;
         transition: right 0.3s ease-in-out;
