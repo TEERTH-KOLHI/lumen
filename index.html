@@ -1399,6 +1399,43 @@
             if (overlay) {
                 overlay.addEventListener('click', toggleSidebar);
             }
+
+            // Delete Animation Logic
+            // Use event delegation for better performance and to handle dynamic items if any
+            const cartList = document.querySelector('.cart-items-list');
+            if (cartList) {
+                cartList.addEventListener('click', function (e) {
+                    // Check if clicked element is a delete button or inside one
+                    const deleteBtn = e.target.closest('.delete-btn-red') || e.target.closest('.cart-delete-icon');
+
+                    if (deleteBtn) {
+                        const item = deleteBtn.closest('.cart-item');
+                        if (item) {
+                            // Add delete class to trigger CSS animation
+                            item.classList.add('delete');
+
+                            // Wait for animation (1.5s as per CSS) then collapse
+                            setTimeout(() => {
+                                // Smooth collapse
+                                item.style.height = '0';
+                                item.style.padding = '0';
+                                item.style.margin = '0';
+                                item.style.opacity = '0';
+
+                                // Finally remove from DOM after collapse buffer
+                                setTimeout(() => {
+                                    item.remove();
+
+                                    // Optional: Check if cart empty and show message
+                                    if (cartList.children.length === 0) {
+                                        // Could show "Cart Empty" message here
+                                    }
+                                }, 400); // 0.4s matches CSS transition for collapse
+                            }, 1400); // Trigger slightly before 1.5s end
+                        }
+                    }
+                });
+            }
         });
     </script>
 </body>
