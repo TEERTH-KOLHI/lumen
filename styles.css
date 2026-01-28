@@ -1810,7 +1810,14 @@ body {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: default;
+}
+
+.delete-btn-red:hover {
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 .delete-icon-white {
