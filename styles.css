@@ -90,9 +90,9 @@ body {
 
 .right-sidebar-column {
     flex: 0 0 auto;
-    width: 300px;
+    width: 320px;
     min-width: 280px;
-    max-width: 300px;
+    max-width: 320px;
     position: sticky;
     top: 80px;
     /* Offset for sticky navbar (60px) + buffer (20px) */
@@ -1644,7 +1644,7 @@ body {
 
 /* Right Sidebar */
 .right-sidebar-column {
-    width: 340px;
+    width: 320px;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 15px;
@@ -1739,7 +1739,9 @@ body {
 .cart-middle-content {
     flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     gap: 4px;
     /* Reduced gap from 8px */
     overflow: hidden;
@@ -3505,9 +3507,9 @@ body {
         /* Override layout hidden */
         position: fixed;
         top: 0;
-        right: -320px;
+        right: -340px;
         /* Hide off-screen */
-        width: 300px;
+        width: 320px;
         height: 100vh;
         z-index: 999;
         transition: right 0.3s ease-in-out;
