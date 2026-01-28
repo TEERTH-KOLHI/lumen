@@ -90,9 +90,9 @@ body {
 
 .right-sidebar-column {
     flex: 0 0 auto;
-    width: 260px;
-    min-width: 250px;
-    max-width: 260px;
+    width: 320px;
+    min-width: 300px;
+    max-width: 320px;
     position: sticky;
     top: 80px;
     /* Offset for sticky navbar (60px) + buffer (20px) */
@@ -108,6 +108,7 @@ body {
     margin-bottom: 30px;
     align-items: center;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .hero-section:hover {
@@ -138,7 +139,7 @@ body {
 }
 
 .user-name-text {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
     color: #FFFFFF;
     text-align: center;
@@ -154,14 +155,14 @@ body {
 }
 
 .flag-icon {
-    width: 20px;
-    height: 14px;
+    width: 24px;
+    height: 18px;
     object-fit: contain;
     border-radius: 2px;
 }
 
 .location-text {
-    font-size: 16px;
+    font-size: 24px;
     color: #FFFFFF;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -207,7 +208,7 @@ body {
     padding: 5px 8px;
     background-color: #FFFFFF;
     border-radius: 11px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #333;
     text-align: center;
@@ -333,7 +334,7 @@ body {
     border-radius: 12px;
     padding: 16px;
     width: fit-content;
-    /* min-width removed */
+    min-width: 230px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -365,7 +366,7 @@ body {
 }
 
 .card-title-text {
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 600;
     color: #333;
 }
@@ -416,7 +417,7 @@ body {
     flex-direction: column;
     gap: 10px;
     width: fit-content;
-    /* min-width removed to fit content strictly */
+    min-width: 230px;
     transition: all 0.3s ease;
 }
 
@@ -444,7 +445,7 @@ body {
 }
 
 .balance-label {
-    font-size: 16px;
+    font-size: 24px;
     color: #7F8C8D;
     font-weight: 600;
     margin-bottom: 0;
@@ -478,7 +479,7 @@ body {
 }
 
 .qr-title-text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: #FFFFFF;
     text-align: center;
@@ -650,7 +651,7 @@ body {
 }
 
 .shop-location-text {
-    font-size: 11px;
+    font-size: 14px;
     color: #888;
     white-space: nowrap;
 }
@@ -668,7 +669,7 @@ body {
 }
 
 .shop-rating-text {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     color: #333;
     display: flex;
@@ -733,7 +734,7 @@ body {
 }
 
 .shop-like-count {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 700;
     color: #333;
 }
@@ -1026,7 +1027,7 @@ body {
 }
 
 .method-name {
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 700;
     color: #111;
     line-height: 1.1;
@@ -1194,19 +1195,19 @@ body {
 .check-red {
     color: #FF4B4B;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .check-orange {
     color: #FF9F2D;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .check-green {
     color: #00E0A6;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* Buttons */
@@ -1650,7 +1651,7 @@ body {
 
 /* Right Sidebar */
 .right-sidebar-column {
-    width: 260px;
+    width: 320px;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 15px;
@@ -3274,9 +3275,9 @@ body {
         /* Override layout hidden */
         position: fixed;
         top: 0;
-        right: -280px;
+        right: -340px;
         /* Hide off-screen */
-        width: 260px;
+        width: 320px;
         height: 100vh;
         z-index: 999;
         transition: right 0.3s ease-in-out;
