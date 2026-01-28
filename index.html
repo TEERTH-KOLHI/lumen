@@ -1379,8 +1379,95 @@
                     // Cleanup
                     setTimeout(() => {
                         clone.remove();
+                        addToCart(card, img.src); // Add to cart after animation
                     }, 800); // Match animation duration
                 }
+            }
+
+            function addToCart(card, imgSrc) {
+                const cartList = document.querySelector('.cart-items-list');
+                if (!cartList) return;
+
+                // Extract Data
+                let title = "Item";
+                let subtitle = "";
+                let price = "0.00";
+                let isZer = false;
+
+                // Try to find title
+                const titleEl = card.querySelector('.package-title-text, .music-title-text, .stream-title-text, .zer-plan-title, .plan-title-large, .shop-name');
+                if (titleEl) title = titleEl.textContent.trim();
+
+                // Try to find subtitle (e.g. usage, songs, etc)
+                const subEl = card.querySelector('.package-subtitle-text, .detail-value-large, .zer-plan-subtitle, .shop-category');
+                if (subEl) subtitle = subEl.textContent.trim();
+
+                // Try to find price
+                const euroEl = card.querySelector('.price-euro-text, .price-large-text');
+                if (euroEl) {
+                    price = euroEl.textContent.trim();
+                } else {
+                    const zerEl = card.querySelector('.price-zer-text, .zer-price-text, .detail-value-large.text-right');
+                    if (zerEl) {
+                        price = zerEl.textContent.trim();
+                        isZer = true;
+                    }
+                }
+
+                // Minimal cleanup
+                price = price.replace(/[^\d.,]/g, '');
+
+                // Create Item HTML
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+
+                let rightContent = '';
+                if (isZer) {
+                    rightContent = `
+                        <div class="delete-btn-red">
+                            <img src="assets/sidebar/delete-icon.svg" class="delete-icon-white">
+                        </div>
+                        <div class="price-horizontal-group">
+                            <img src="assets/sidebar/yello-currency-icon.svg" class="zer-icon-yellow">
+                            <div class="price-vertical-stack">
+                                <div class="price-green-bold">${price}</div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    rightContent = `
+                        <div class="delete-btn-red">
+                            <img src="assets/sidebar/delete-icon.svg" class="delete-icon-white">
+                        </div>
+                        <div class="cart-price-column">
+                            <div class="price-current-row">
+                                <img src="assets/sidebar/euro-currency-icon.svg" class="euro-icon-green">
+                                ${price}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                itemDiv.innerHTML = `
+                    <img src="${imgSrc}" alt="${title}" class="cart-item-icon">
+
+                    <div class="cart-middle-content">
+                        <div class="cart-text-group">
+                            <div class="cart-item-name">${title}</div>
+                            <div class="cart-item-subtitle">${subtitle}</div>
+                        </div>
+                        <div class="percent-badge-pill">
+                            <img src="assets/sidebar/5%-icon.svg" class="badge-icon-small">
+                            <span class="badge-text">5%</span>
+                        </div>
+                    </div>
+
+                    <div class="cart-right-content">
+                        ${rightContent}
+                    </div>
+                `;
+
+                cartList.appendChild(itemDiv);
             }
 
             // Bind to all add-cart buttons
