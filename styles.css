@@ -2628,18 +2628,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-width: 100px;
-    max-width: 130px;
-    flex-shrink: 1;
+    min-width: 140px;
+    /* Increased to fit larger avatar */
+    max-width: 150px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
     text-align: center;
 }
 
 .user-avatar-large {
-    width: 90px;
-    height: 90px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .user-info-box {
@@ -2650,8 +2652,8 @@ body {
 }
 
 .user-name-text {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 800;
     color: #FFFFFF;
 }
 
@@ -2668,9 +2670,10 @@ body {
 }
 
 .location-text {
-    font-size: 13px;
+    font-size: 14px;
     color: #FFFFFF;
     opacity: 0.9;
+    font-weight: 500;
 }
 
 .info-cards-row {
