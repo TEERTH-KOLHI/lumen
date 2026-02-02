@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Genos:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -225,7 +225,8 @@ body {
 .badge-red {
     padding: 4px 6px;
     background-color: #FF3B30;
-    border-radius: 10px;
+    border-radius: 4px;
+    /* Updated to 4px as requested */
     font-size: 10px;
     font-weight: 700;
     color: #FFFFFF;
@@ -236,10 +237,10 @@ body {
 .card-free-text {
     font-size: 13px;
     font-weight: 600;
-    color: #00D9A3;
-    background-color: rgba(0, 217, 163, 0.15);
+    color: #FFFFFF;
+    background-color: #00D9A3;
     padding: 4px 8px;
-    border-radius: 10px;
+    border-radius: 4px;
     width: fit-content;
     display: inline-block;
 }
@@ -251,13 +252,15 @@ body {
 
 .card-renew-text {
     font-size: 11px;
-    color: #00D9A3;
-    background-color: rgba(0, 217, 163, 0.15);
+    color: #FFFFFF;
+    background-color: #00D9A3;
     padding: 3px 6px;
-    border-radius: 10px;
+    border-radius: 4px;
     width: fit-content;
     display: inline-block;
     margin-top: 3px;
+    font-weight: 600;
+    /* Added for consistency with image */
 }
 
 .card-price-row {
@@ -447,21 +450,21 @@ body {
 
 .badge-free {
     padding: 4px 10px;
-    background-color: rgba(0, 217, 163, 0.15);
-    border-radius: 10px;
+    background-color: #00D9A3;
+    border-radius: 4px;
     font-size: 10px;
     font-weight: 600;
-    color: #00D9A3;
+    color: #FFFFFF;
     text-align: center;
 }
 
 .badge-onsale {
     padding: 4px 10px;
-    background-color: rgba(0, 217, 163, 0.15);
-    border-radius: 10px;
+    background-color: #00D9A3;
+    border-radius: 4px;
     font-size: 10px;
     font-weight: 600;
-    color: #00D9A3;
+    color: #FFFFFF;
     text-align: center;
 }
 
@@ -3178,7 +3181,7 @@ body {
 }
 
 .footer-links li::before {
-    content: 'â€º';
+    content: '›';
     /* Chevron */
     font-size: 18px;
     line-height: 1;
@@ -3518,4 +3521,3 @@ body {
 }
 
 /* Reduced from 10px */
-}
