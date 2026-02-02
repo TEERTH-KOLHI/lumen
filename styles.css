@@ -63,7 +63,7 @@ body {
 
 /* Content Wrapper */
 .content-wrapper {
-    padding: 15px 1.5%;
+    padding: 15px 0px 15px 1.5%;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -186,6 +186,7 @@ body {
     border-radius: 12px;
     padding: 10px;
     width: 190px;
+    min-height: 132px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -280,28 +281,74 @@ body {
     font-size: 11px;
     font-weight: 700;
     color: #00D9A3;
+    margin-top: -4px;
 }
 
 .deactivated-row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px;
     margin-top: 6px;
 }
 
 .deactivated-text {
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 16px !important;
+    font-weight: 600;
     color: #FF3B30;
 }
 
+/* Toggle Switch - Checkbox Based (Reliable) */
+.toggle-switch-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FF3B30;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-slider::before {
+    transform: translateX(12px);
+}
+
+/* Keep old toggle-switch class for backward compatibility if used elsewhere */
 .toggle-switch {
     width: 28px;
     height: 16px;
     background-color: #FF3B30;
     border-radius: 20px;
     position: relative;
+    cursor: pointer;
 }
 
 .toggle-switch::after {
@@ -313,6 +360,13 @@ body {
     height: 12px;
     background-color: #FFFFFF;
     border-radius: 50%;
+    transition: right 0.3s ease, left 0.3s ease;
+}
+
+/* Active state for simple toggle - only move knob, keep color */
+.toggle-switch.active::after {
+    right: auto;
+    left: 2px;
 }
 
 /* CULTIVATED Card */
@@ -321,6 +375,7 @@ body {
     border-radius: 12px;
     padding: 10px;
     width: 175px;
+    min-height: 132px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -339,8 +394,9 @@ body {
 .info-card-freelist {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 12px;
-    width: 160px;
+    padding: 10px;
+    width: 175px;
+    min-height: 132px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -412,18 +468,19 @@ body {
 .balance-cards-column {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     align-items: flex-start;
 }
 
 .balance-card-box {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     width: 160px;
+    height: 101px;
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
@@ -1346,7 +1403,7 @@ body {
     font-size: 20px !important;
     color: #999;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
     text-align: right;
     margin-top: -20px;
     /* Pulling price label up as per design layout? No, design has Name left, Price label right */
@@ -1358,8 +1415,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-top: 0px;
 }
 
 .price-zer-row {
@@ -1559,6 +1616,7 @@ body {
     top: 2px;
     left: 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease, background-color 0.3s ease;
 }
 
 .music-details-grid {
@@ -3357,4 +3415,59 @@ body {
         transform: translateX(-100px);
         opacity: 0;
     }
+}
+
+/* ============================================
+   TOGGLE SWITCHES - INTERACTIVE STYLES
+   ============================================ */
+
+/* Card Top Toggle (Monthly/Yearly) */
+.card-top-toggle-green {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    background-color: #00D9A3;
+    border-radius: 20px;
+    padding: 4px;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.toggle-text-monthly {
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.toggle-text-monthly.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle-pill-white {
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #00D9A3;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.toggle-pill-white.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+}
+
+/* Smooth transitions for all interactive elements */
+.toggle-switch-green,
+.card-top-toggle-green,
+.toggle-track {
+    transition: all 0.3s ease;
 }

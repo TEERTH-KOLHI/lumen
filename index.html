@@ -67,7 +67,10 @@
                                 <div class="cashback-text">5% CASHBACK</div>
                                 <div class="deactivated-row">
                                     <div class="deactivated-text">Deactivated</div>
-                                    <div class="toggle-switch"></div>
+                                    <label class="toggle-switch-wrapper">
+                                        <input type="checkbox" class="toggle-checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
                                 </div>
                             </div>
 
@@ -1523,6 +1526,59 @@
                     }
                 });
             }
+
+            // ============================================
+            // TOGGLE SWITCHES FUNCTIONALITY
+            // ============================================
+
+            // ============================================
+            // TOGGLE SWITCHES FUNCTIONALITY
+            // ============================================
+
+            // 1. Simple Toggle Switches (checkbox-based toggles work automatically, no JS needed)
+            // Keeping this for any remaining old-style toggles
+            const simpleToggles = document.querySelectorAll('.toggle-switch');
+            simpleToggles.forEach((toggle) => {
+                toggle.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+
+            // 2. Card Top Toggles (Monthly/Yearly toggles in plan cards)
+            const cardTopToggles = document.querySelectorAll('.card-top-toggle-green');
+            cardTopToggles.forEach(toggleContainer => {
+                toggleContainer.addEventListener('click', function () {
+                    const monthlyText = this.querySelector('.toggle-text-monthly');
+                    const yearlyPill = this.querySelector('.toggle-pill-white');
+
+                    // Toggle active states
+                    if (monthlyText && yearlyPill) {
+                        monthlyText.classList.toggle('active');
+                        yearlyPill.classList.toggle('active');
+                    }
+                });
+            });
+
+            // 3. Auto Charge Toggle Switches (in music and stream cards)
+            const autoChargeToggles = document.querySelectorAll('.toggle-switch-green');
+            autoChargeToggles.forEach(toggleContainer => {
+                const track = toggleContainer.querySelector('.toggle-track');
+                const knob = toggleContainer.querySelector('.toggle-knob');
+
+                if (track && knob) {
+                    toggleContainer.addEventListener('click', function () {
+                        // Toggle active state
+                        this.classList.toggle('active');
+
+                        // Move the knob only, don't change colors
+                        if (this.classList.contains('active')) {
+                            knob.style.left = '16px'; // Move to right
+                        } else {
+                            knob.style.left = '2px'; // Move to left
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
