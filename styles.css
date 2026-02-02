@@ -96,6 +96,7 @@ body {
     position: sticky;
     top: 80px;
     /* Offset for sticky navbar (60px) + buffer (20px) */
+    padding: 2px;
 }
 
 /* Hero Section */
@@ -1791,7 +1792,7 @@ body {
     background-color: #FFFFFF;
     border-radius: 12px;
     padding: 8px;
-    /* Reduced to 8px all around */
+    /* Reverted to 8px */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1884,22 +1885,33 @@ body {
 }
 
 .delete-btn-red {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: default;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+    /* Push to top */
 }
 
 .delete-btn-red:hover {
-    transform: none !important;
+    background-color: #ffe0e3;
+    transform: scale(1.05);
+    /* Gentle hover effect */
     opacity: 1 !important;
     box-shadow: none !important;
-    background-color: transparent !important;
 }
 
 .delete-icon-white {
-    width: 100%;
-    height: 100%;
+    width: 15px;
+    height: 18px;
+    /* Adjusted to Aspect Ratio of new SVG (15x18) */
+    object-fit: contain;
+    filter: none;
+    /* Important: Show original SVG colors */
     display: block;
 }
 
@@ -2316,7 +2328,7 @@ body {
 }
 
 /* Payment Methods List */
-.method-item {
+.method-card {
     display: flex;
     align-items: center;
     gap: 12px;
